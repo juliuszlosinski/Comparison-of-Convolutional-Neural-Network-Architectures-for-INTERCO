@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/f312df23-5db5-473b-b216-533d2138d113)This paper invistages the problem of choosing the best CNN architecture for INTERCO problem.
+This paper invistages the problem of choosing the best CNN architecture for INTERCO problem.
 =======
 This study search for the best classification CNN based network for INTERCO flags problem. The best CNN architecture will replace the backbone in YOLOv8 medium model in next paper.
 
@@ -11,12 +11,11 @@ TODO
 TODO
 
 ## 3. Typical CNN architecture
-TODO
-
-## 4. CNN architectures 
 ![image](https://github.com/user-attachments/assets/7db35f08-66f5-4901-a646-547af2b06dc6)
 ![image](https://github.com/user-attachments/assets/dee1805c-fbd9-4b4d-bad4-6d117756c871)
 ![image](https://github.com/user-attachments/assets/1cfe345b-592b-4024-92b3-941f5e356ff2)
+
+## 4. CNN architectures 
 
 ### 4.1 AlexNet (2012)
 ![image](https://github.com/user-attachments/assets/cd41ab30-fbe0-4083-bd00-30ff562461cc)
