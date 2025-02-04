@@ -1,5 +1,5 @@
-This paper invistages the problem of choosing the best CNN architecture for INTERCO problem.
-=======
+**Goal:** Researching the problem of choosing the best CNN architecture for INTERCO classification problem.
+
 This study search for the best classification CNN based network for INTERCO flags problem. The best CNN architecture will replace the backbone in YOLOv8 medium model in next paper.
 
 **Hypothesis:** Choosing the best CNN architecture for INTERCO dataset improves classification accuracy.
