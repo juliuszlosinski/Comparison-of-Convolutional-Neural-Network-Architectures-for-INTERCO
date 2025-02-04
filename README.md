@@ -33,11 +33,15 @@ ZFNet (2013) is an improved version of AlexNet, developed by Zeiler and Fergus. 
 
 VGGNet (2014) is a CNN architecture developed by the Visual Geometry Group (VGG) at Oxford. It improved upon previous models by using **deeper architecture** with small (3x3) convolutional filters/kernels. The most important features are: **increased depth** (16 or 19 layers) for better feature extraction, **uniform 3x3 filters/kernels** instead of larger ones for improvin learning capacity, **max pooling layers** to reduce spatial dimensions while preserving key features, **fully connected layers** at the end for classification. It has high computational cost. VGGNet comes in two main variants: **VGG-16** contains 16 weight layers (13 convolutional + 3 fully connected layers), **VGG-19** a deeper version with 19 weight layers (16 convolutional + 3 fully connected layers). Both models follow the same desing principle, using only **3x3** convolutional filters/kernels and **max pooling layers**. VGG-19 have more convolutional layers which makes slightly more efficient.
 
-### 4.3 Inception
+### 4.3 Inception (2014)
 ![image](https://github.com/user-attachments/assets/d2aca0e5-a616-4d92-a464-4191366d7cac)
 
-### 4.4 ResNet
+GoogLeNet (Inception) (2014) is cnn architecture developed by Google. It introduced the Inception module, which made the network more efficient and reduced computational costs. The most important features are: **inception module** uses multiple filter/kernel sizes (1x1, 3x3, 5x5) in parallel to capture different levels of detail, **1x1 convolutions** reduces dimensionality before expensive operations improving efficiency, **deep network (22 layers)** but computationally optimized, **global average pooling** instead of fully connected layers in order to reduce number of parameters and overfitting. The Inception (GoogLeNet) family has several versions, each improving efficiency and accuracy: Inception v1 (2014) introduced the **inception module** with multiple filter/kernel sizes, Inception v2 (2015) used **batch normalization** and **factorized convolutions** in order to improve training speed, Inception v3 (2015) optimized the network further with **smaller convolutions** (replacing 5x5 filters with two 3x3 filters), Inception v4 (2016) **combined** inception modules with **ResNet** for better performance (called Inception-ResNet).
+
+### 4.4 ResNet (2015)
 ![image](https://github.com/user-attachments/assets/846e1fbd-8245-471e-8ffe-79ffd1d2eedf)
+
+ResNet (Residual Network) (2015) is a CNN architecture created by Microsoft. It introduced **residual connections (skip connections)** to solve the problem of **vanishing gradients**, allowing much deeper networks to be trained effectively. The most important features are: **residual connections** skip layers in order to allow direct gradient flow preventing degradation in deep networks, **very deep architecture** can have 50/101/152 or even 1000+ layers, **bootleneck** layers (1x1 convolutions) reduce computation while maintaining accuracy, **batch normalization** in order to have stable and faster training.
 
 ### 4.5 ResNeXt
 ![image](https://github.com/user-attachments/assets/0cd2a942-5e77-43fd-a50f-48bf29208406)
