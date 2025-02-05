@@ -4,6 +4,27 @@ This study search for the best classification CNN based network for INTERCO flag
 
 **Hypothesis:** Choosing the best CNN architecture for INTERCO dataset improves classification accuracy.
 
+**Used CNNs architectures on INTERCO:**
+- AlexNet (2012) (5 conv + 3 linear), [1]
+- VGG (2014) (Deeper architecture):
+  - VGG 16 (13 Conv + 3 Linear), [2]
+  - VGG 19 (16 Conv + 3 Linear). [3]
+- GoogLeNet/Inception (Inception modules) (2014):
+  - Inception v3 (2015) (smaller Conv). [4]
+- ResNet (2015) (Skip connections):
+  - ResNet-18 (18 layers deep), [5]
+  - ResNet-34 (34 layers deep), [6]
+  - ResNet-50 (50 layers deep, most commonly used) [7].
+- ResNeXt (2017) (Grouped convolutions):
+  - resnext50_32x4d (32 groups per 4 conv) [8].
+- MobileNet (2017) (depthwise seperable conv, pointwise operations):
+  - MobileNetV2 (2018) (invered residual blocks, linear bottlenecks) [9],
+- EfficientNet (2019) (compound scaling method, mobile friendly):
+  - EfficientNet-B0 [10],
+  - EfficientNet-B1 [11].
+- CSPNet (2020) (cross-stage partial connections) [12],
+- ConvNeXt (2020) (transformer inspired architecture) [13].
+
 ## 1. UML
 TODO
 
