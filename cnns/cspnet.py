@@ -92,7 +92,11 @@ class CSPNetWrapper:
         self.model = CSPNet(number_of_classes, model_type)
         self.model = self.model.to(self.device)
 
-    def fit(self, path_to_dataset, number_of_epochs=10, batch_size=32, learning_rate=0.001):
+    def fit(self, path_to_dataset, 
+            number_of_epochs=10, 
+            batch_size=32, 
+            learning_rate=0.001,
+            save_the_best_model=False):
         # 1. Defining data transforms
         transform = torchvision.transforms.Compose([
             torchvision.transforms.Resize((224, 224)),  # CSPNet typically uses 224x224 images
@@ -141,7 +145,8 @@ class CSPNetWrapper:
             # 6.3 Saving best model based on validation accuracy
             if val_accuracy > best_val_accuracy:
                 best_val_accuracy = val_accuracy
-                torch.save(self.model.state_dict(), "best_cspnet.pth")
+                if save_the_best_model:
+                    torch.save(self.model.state_dict(), "best_cspnet.pth")
                 print("Best model saved with Accuracy: {:.4f}".format(best_val_accuracy))
 
         print("Training complete. Best validation accuracy: {:.4f}".format(best_val_accuracy))

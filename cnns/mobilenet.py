@@ -22,7 +22,8 @@ class MobileNet:
     def fit(self, path_to_dataset, 
             number_of_epochs=10, 
             batch_size=32, 
-            learning_rate=0.001):
+            learning_rate=0.001,
+            save_the_best_model=False):
         # 1. Defining data transforms for MobileNet architecture.
         transform = torchvision.transforms.Compose([
             torchvision.transforms.Resize((224, 224)),  # MobileNet typically uses 224x224 images
@@ -71,7 +72,8 @@ class MobileNet:
             # 9. Saving best model based on validation accuracy.
             if val_accuracy > best_val_accuracy:
                 best_val_accuracy = val_accuracy
-                torch.save(self.cnn_model.state_dict(), "best_mobilenet.pth")
+                if save_the_best_model:
+                    torch.save(self.cnn_model.state_dict(), "best_mobilenet.pth")
                 print("Best model saved with Accuracy: {:.4f}".format(best_val_accuracy))
 
         print("Training complete. Best validation accuracy: {:.4f}".format(best_val_accuracy))

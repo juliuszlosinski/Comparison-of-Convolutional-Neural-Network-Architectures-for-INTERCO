@@ -19,7 +19,8 @@ class Inception:
     def fit(self, path_to_dataset, 
             number_of_epochs=10, 
             batch_size=32, 
-            learning_rate=0.001):
+            learning_rate=0.001,
+            save_the_best_model=False):
         
         # 1. Defining data transforms for VGG architecture.
         transform = torchvision.transforms.Compose([
@@ -69,7 +70,8 @@ class Inception:
             # 9. Saving best model based on validation accuracy.
             if val_accuracy > best_val_accuracy:
                 best_val_accuracy = val_accuracy
-                torch.save(self.cnn_model.state_dict(), "best_inception.pth")
+                if save_the_best_model:
+                    torch.save(self.cnn_model.state_dict(), "best_inception.pth")
                 print(f"Best model saved with Accuracy: {best_val_accuracy:.4f}")
 
         print(f"Training complete. Best validation accuracy: {best_val_accuracy:.4f}")

@@ -1,0 +1,19 @@
+#!/bin/bash -l
+
+#SBATCH -J convenextJL                                  # nazwa zadania
+#SBATCH -p batch                                        # nazwa kolejki [test, batch]
+#SBATCH -N 1                                            # ilosc wezlow (default 1)
+#SBATCH --ntasks-per-node 48                            # ilosc rdzeni w wezle [max=48 (default)]
+#SBATCH --mem 25000                                     # ilosc pamieci na realizację zadania na wezeł [MB]
+#SBATCH --time 24:00:00                                 # określenie czasu dla zadania [test(max)=15 min.; batch(max)=3 dni]
+#SBATCH --mail-type=END                                 # powiadomienie o koncu dzialania zadania na adres mail
+#SBATCH --mail-user=j.losinski@wi.umg.edu.pl            # wyslanie wiadomosci o zadaniu na wybrany adres
+
+# 1. Wczytanie modułow
+module load trytonp/python3/3.11.7
+
+# 2. Pobranie modułow
+pip3 install -r requirements.txt
+
+# 3. Uruchomienie skryptu
+python3 classify.py --cnn_type convnext --n_classes 26 --path_to_dataset .\maritime-flags-dataset\SMOTE_balanced_flags --batch_size 32 --n_epochs 100 --learning_rate 0.001

@@ -85,9 +85,9 @@ if __name__ == '__main__':
     learning_rate = args.learning_rate
     
     print(f"\nConfiguration:")
-    print(f"Selected cnn type: {cnn_type} (cmd)")
-    print(f"Number of classes: {number_of_classes} (cmd)")
-    print(f"Path to dataset: {path_to_dataset} (cmd)")
+    print(f"Selected cnn type: {cnn_type}")
+    print(f"Number of classes: {number_of_classes}")
+    print(f"Path to dataset: {path_to_dataset}")
     print(f"Number of epochs: {number_of_epochs}")
     print(f"Learning rate: {learning_rate}")
     print(f"Batch size: {batch_size}\n")
@@ -118,3 +118,11 @@ if __name__ == '__main__':
         cnn_model = CSPNet(number_of_classes)
     elif cnn_type == "convnext":
         cnn_model = ConvNeXt(number_of_classes)
+        
+    cnn_model.fit(
+        path_to_dataset = path_to_dataset,
+        number_of_epochs = number_of_epochs, # 100
+        batch_size = batch_size,       # 32
+        learning_rate = learning_rate, # 0.001
+        save_the_best_model = False
+    )
