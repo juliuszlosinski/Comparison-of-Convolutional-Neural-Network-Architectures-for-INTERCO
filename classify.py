@@ -56,6 +56,9 @@ if __name__ == '__main__':
                         choices=CNN_TYPES, default='alexnet',
                         help='Specify the model type to use (default: alexnet)'
     )
+    parser.add_argument('--path_to_dataset', type=str,
+                        default="./maritime-flags-dataset/balanced_two_flags", required=True,
+                        help='Specify the path to dataset (default: ./maritime-flags-dataset/balanced_two_flags)')
     parser.add_argument('--n_classes', type=int, 
                         default=2, required=True,
                         help='Specify the number of classes (default: 2)'
@@ -68,13 +71,10 @@ if __name__ == '__main__':
                         default=10, required=True,
                         help='Specify the number of epochs (default: 10)'
     )
-    parser.add_argument('--learning_rate', type=int, 
+    parser.add_argument('--learning_rate', type=float, 
                         default=2, required=True,
                         help='Specify the value of learning rate (default: 0.001)'
     )
-    parser.add_argument('--path_to_dataset', type=str,
-                        default="./maritime-flags-dataset/balanced_two_flags", required=True,
-                        help='Specify the path to dataset (default: ./maritime-flags-dataset/balanced_two_flags)')
     args = parser.parse_args()
     
     cnn_type = args.cnn_type
@@ -100,3 +100,21 @@ if __name__ == '__main__':
         cnn_model = VGG(number_of_classes, "vgg19")
     elif cnn_type == "inceptionv3":
         cnn_model = Inception(number_of_classes)
+    elif cnn_type == "resnet-18":
+        cnn_model = ResNet(number_of_classes, "resnet18")
+    elif cnn_type == "resnet-34":
+        cnn_model = ResNet(number_of_classes, "resnet34")
+    elif cnn_type == "resnet-50":
+        cnn_model = ResNet(number_of_classes, "resnet50")
+    elif cnn_type == "resnext":
+        cnn_model = ResNeXt(number_of_classes)
+    elif cnn_type == "mobilenetv2":
+        cnn_model = MobileNet(number_of_classes)
+    elif cnn_type == "efficientnet-b0":
+        cnn_model = EfficientNet(number_of_classes, "efficientnet_b0")
+    elif cnn_type == "efficientnet-b1":
+        cnn_model = EfficientNet(number_of_classes, "efficientnet_b1")
+    elif cnn_type == "cspnet":
+        cnn_model = CSPNet(number_of_classes)
+    elif cnn_type == "convnext":
+        cnn_model = ConvNeXt(number_of_classes)
