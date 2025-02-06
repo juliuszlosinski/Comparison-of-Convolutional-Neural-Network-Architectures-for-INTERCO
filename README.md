@@ -33,35 +33,35 @@ TODO
 ├── documentation       <- UML diagrams and configuration
 ├── cnns                <- Package with CNN architectures
 │   ├── __init__.py     <- Package identicator
-│   ├── alexnet.py      <- AlexNet architecture
-│   ├── vgg.py          <- VGG architecture
-│   ├── inception.py    <- GoogLeNet/Incpetion architecture
-│   ├── resnet.py       <- ResNet architecture
-│   ├── resnext.py      <- ResNeXt architecture
-│   ├── mobilenet.py    <- MobileNet architecture
-│   ├── efficientnet.py <- EfficientNet architecture
-|   ├── cspnet.py       <- CSPNet architecture
-│   └── convnext.py     <- ConvNeXt architecture
+│   ├── alexnet.py      <- AlexNet (2012) architecture
+│   ├── vgg.py          <- VGG (2014) architecture
+│   ├── inception.py    <- GoogLeNet/Incpetion (2014) architecture
+│   ├── resnet.py       <- ResNet (2015) architecture
+│   ├── resnext.py      <- ResNeXt (2017) architecture
+│   ├── mobilenet.py    <- MobileNet (2017) architecture
+│   ├── efficientnet.py <- EfficientNet (2019) architecture
+|   ├── cspnet.py       <- CSPNet (2020) architecture
+│   └── convnext.py     <- ConvNeXt (2022) architecture
 ├── maritime-flags-dataset    <- Source and balanced flags (A-Z)
-│   ├── SMOTE_balanced_flags  <- Balanced flags by using SMOTE balancer
+│   ├── SMOTE_balanced_flags  <- Balanced flags by using SMOTE balancer (total: 26 000)
 │   └── two_balanced_flags    <- Balanced two flags (A and B) per 1000 images
 ├── .gitignore        <- Ignores venv_environment directory to be pushed (VENV)
 ├── requirements.txt  <- List for venv with all used packages (VENV)
 ├── classify.py       <- Classification by using CNN architectures (Fitting/Evaluation)
-├── test.bat          <- Tesing CNN architectures
-├── alexnet_classify_slurm_script     <- AlexNet CNN SLURM
-├── vgg16_classify_slurm_script       <- VGG16 CNN SLURM
-├── vgg19_classify_slurm_script       <- VGG19 CNN SLURM
-├── inceptionv3_classify_slurm_script <- INCEPTION V3 CNN SLURM
-├── resnet-18_classify_slurm_script   <- ResNet-18 CNN SLURM
-├── resnet-34_classify_slurm_script   <- ResNet-34 CNN SLURM
-├── resnet-50_classify_slurm_script   <- ResNet-50 CNN SLURM
-├── resnext_classify_slurm_script     <- ResNeXt CNN SLURM
-├── mobilenetv2_classify_slurm_script       <- MobileNetv2 CNN SLURM
-├── efficientnet-b0_classify_slurm_script   <- EfficientNet B0 CNN SLURM
-├── efficientnet-b1_classify_slurm_script   <- EfficientNet B1 CNN SLURM
-├── cspnet_classify_slurm_script            <- CSPNet CNN SLURM
-└── convnext_classify_slurm_script          <- ConvNeXt CNN SLURM
+├── test.bat          <- Tesing CNN architectures for Windows platform
+├── alexnet_classify_slurm_script     <- AlexNet CNN SLURM (Linux)
+├── vgg16_classify_slurm_script       <- VGG16 CNN SLURM (Linux)
+├── vgg19_classify_slurm_script       <- VGG19 CNN SLURM (Linux)
+├── inceptionv3_classify_slurm_script <- INCEPTION V3 CNN SLURM (Linux)
+├── resnet-18_classify_slurm_script   <- ResNet-18 CNN SLURM (Linux)
+├── resnet-34_classify_slurm_script   <- ResNet-34 CNN SLURM (Linux)
+├── resnet-50_classify_slurm_script   <- ResNet-50 CNN SLURM (Linux)
+├── resnext_classify_slurm_script     <- ResNeXt CNN SLURM (Linux)
+├── mobilenetv2_classify_slurm_script     <- MobileNetv2 CNN SLURM (Linux)
+├── efficientnet-b0_classify_slurm_script <- EfficientNet B0 CNN SLURM (Linux)
+├── efficientnet-b1_classify_slurm_script <- EfficientNet B1 CNN SLURM (Linux)
+├── cspnet_classify_slurm_script          <- CSPNet CNN SLURM (Linux)
+└── convnext_classify_slurm_script        <- ConvNeXt CNN SLURM (Linux)
 ```
 
 ## 3. Typical CNN architecture
