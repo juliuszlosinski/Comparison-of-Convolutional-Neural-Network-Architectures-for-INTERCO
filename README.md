@@ -29,7 +29,40 @@ This study search for the best classification CNN based network for INTERCO flag
 TODO
 
 ## 2. Project organization
-TODO
+```
+├── documentation       <- UML diagrams and configuration
+├── cnns                <- Package with CNN architectures
+│   ├── __init__.py     <- Package identicator
+│   ├── alexnet.py      <- AlexNet architecture
+│   ├── vgg.py          <- VGG architecture
+│   ├── inception.py    <- GoogLeNet/Incpetion architecture
+│   ├── resnet.py       <- ResNet architecture
+│   ├── resnext.py      <- ResNeXt architecture
+│   ├── mobilenet.py    <- MobileNet architecture
+│   ├── efficientnet.py <- EfficientNet architecture
+|   ├── cspnet.py       <- CSPNet architecture
+│   └── convnext.py     <- ConvNeXt architecture
+├── maritime-flags-dataset    <- Source and balanced flags (A-Z)
+│   ├── SMOTE_balanced_flags  <- Balanced flags by using SMOTE balancer
+│   └── two_balanced_flags    <- Balanced two flags (A and B) per 1000 images
+├── .gitignore        <- Ignores venv_environment directory to be pushed (VENV)
+├── requirements.txt  <- List for venv with all used packages (VENV)
+├── classify.py       <- Classification by using CNN architectures (Fitting/Evaluation)
+├── test.bat          <- Tesing CNN architectures
+├── alexnet_classify_slurm_script     <- AlexNet CNN SLURM
+├── vgg16_classify_slurm_script       <- VGG16 CNN SLURM
+├── vgg19_classify_slurm_script       <- VGG19 CNN SLURM
+├── inceptionv3_classify_slurm_script <- INCEPTION V3 CNN SLURM
+├── resnet-18_classify_slurm_script   <- ResNet-18 CNN SLURM
+├── resnet-34_classify_slurm_script   <- ResNet-34 CNN SLURM
+├── resnet-50_classify_slurm_script   <- ResNet-50 CNN SLURM
+├── resnext_classify_slurm_script     <- ResNeXt CNN SLURM
+├── mobilenetv2_classify_slurm_script       <- MobileNetv2 CNN SLURM
+├── efficientnet-b0_classify_slurm_script   <- EfficientNet B0 CNN SLURM
+├── efficientnet-b1_classify_slurm_script   <- EfficientNet B1 CNN SLURM
+├── cspnet_classify_slurm_script            <- CSPNet CNN SLURM
+└── convnext_classify_slurm_script          <- ConvNeXt CNN SLURM
+```
 
 ## 3. Typical CNN architecture
 ![image](https://github.com/user-attachments/assets/7db35f08-66f5-4901-a646-547af2b06dc6)
