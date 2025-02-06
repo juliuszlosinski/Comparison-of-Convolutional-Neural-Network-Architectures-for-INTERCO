@@ -23,7 +23,7 @@ This study search for the best classification CNN based network for INTERCO flag
   - EfficientNet-B0 [10],
   - EfficientNet-B1 [11].
 - CSPNet (2020) (cross-stage partial connections) [12],
-- ConvNeXt (2020) (transformer inspired architecture) [13].
+- ConvNeXt (2022) (transformer inspired architecture) [13].
 
 ## 1. UML
 TODO
