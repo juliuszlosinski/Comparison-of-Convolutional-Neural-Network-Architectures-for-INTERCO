@@ -1,5 +1,5 @@
 set NUMBER_OF_CLASSES=2
-set PATH_TO_DATASET=.\maritime-flags-dataset\balanced_two_flags
+set PATH_TO_DATASET=.\maritime-flags-dataset\small_balanced_two_flags
 set NUMBER_OF_EPOCHS=1
 set BATCH_SIZE=32
 set LEARNING_RATE=0.001

@@ -1,0 +1,248 @@
+D:\GITHUB - Comparison of CNN Architectures for INTERCO\Comparison-of-Convolutional-Neural-Network-Architectures-for-INTERCO>py classify.py --cnn_type alexnet --n_classes 2 --path_to_dataset .\maritime-flags-dataset\small_balanced_two_flags --batch_size 32 --n_epochs 1 --learning_rate 0.001
+
+Configuration:
+Selected cnn type: alexnet
+Number of classes: 2
+Path to dataset: .\maritime-flags-dataset\small_balanced_two_flags
+Number of epochs: 1
+Learning rate: 0.001
+Batch size: 32
+
+Epoch 1/1 - Training Loss: 1.4363
+Validation Results:
+  Accuracy: 1.0000
+  Precision: 1.0000
+  Recall: 1.0000
+  F1-score: 1.0000
+Best model saved with Accuracy: 1.0000
+Training complete. Best validation accuracy: 1.0000
+
+D:\GITHUB - Comparison of CNN Architectures for INTERCO\Comparison-of-Convolutional-Neural-Network-Architectures-for-INTERCO>py classify.py --cnn_type vgg16 --n_classes 2 --path_to_dataset .\maritime-flags-dataset\small_balanced_two_flags --batch_size 32 --n_epochs 1 --learning_rate 0.001
+
+Configuration:
+Selected cnn type: vgg16
+Number of classes: 2
+Path to dataset: .\maritime-flags-dataset\small_balanced_two_flags
+Number of epochs: 1
+Learning rate: 0.001
+Batch size: 32
+
+Epoch 1/1 - Training Loss: 1.9571
+Validation Results:
+  Accuracy: 0.5000
+  Precision: 0.2500
+  Recall: 0.5000
+  F1-score: 0.3333
+Best model saved with Accuracy: 0.5000
+Training complete. Best validation accuracy: 0.5000
+
+D:\GITHUB - Comparison of CNN Architectures for INTERCO\Comparison-of-Convolutional-Neural-Network-Architectures-for-INTERCO>py classify.py --cnn_type vgg19 --n_classes 2 --path_to_dataset .\maritime-flags-dataset\small_balanced_two_flags --batch_size 32 --n_epochs 1 --learning_rate 0.001
+
+Configuration:
+Selected cnn type: vgg19
+Number of classes: 2
+Path to dataset: .\maritime-flags-dataset\small_balanced_two_flags
+Number of epochs: 1
+Learning rate: 0.001
+Batch size: 32
+
+Epoch 1/1 - Training Loss: 1.5175
+Validation Results:
+  Accuracy: 0.6650
+  Precision: 0.6880
+  Recall: 0.6650
+  F1-score: 0.6544
+Best model saved with Accuracy: 0.6650
+Training complete. Best validation accuracy: 0.6650
+
+D:\GITHUB - Comparison of CNN Architectures for INTERCO\Comparison-of-Convolutional-Neural-Network-Architectures-for-INTERCO>py classify.py --cnn_type inceptionv3 --n_classes 2 --path_to_dataset .\maritime-flags-dataset\small_balanced_two_flags --batch_size 32 --n_epochs 1 --learning_rate 0.001
+
+Configuration:
+Selected cnn type: inceptionv3
+Number of classes: 2
+Path to dataset: .\maritime-flags-dataset\small_balanced_two_flags
+Number of epochs: 1
+Learning rate: 0.001
+Batch size: 32
+
+Epoch 1/1 - Training Loss: 0.0000
+Validation Results:
+  Accuracy: 0.9950
+  Precision: 0.9950
+  Recall: 0.9950
+  F1-score: 0.9950
+Best model saved with Accuracy: 0.9950
+Training complete. Best validation accuracy: 0.9950
+
+D:\GITHUB - Comparison of CNN Architectures for INTERCO\Comparison-of-Convolutional-Neural-Network-Architectures-for-INTERCO>py classify.py --cnn_type resnet-18 --n_classes 2 --path_to_dataset .\maritime-flags-dataset\small_balanced_two_flags --batch_size 32 --n_epochs 1 --learning_rate 0.001
+
+Configuration:
+Selected cnn type: resnet-18
+Number of classes: 2
+Path to dataset: .\maritime-flags-dataset\small_balanced_two_flags
+Number of epochs: 1
+Learning rate: 0.001
+Batch size: 32
+
+Epoch 1/1 - Training Loss: 0.1670
+Validation Results:
+  Accuracy: 0.5650
+  Precision: 0.7674
+  Recall: 0.5650
+  F1-score: 0.4635
+Best model saved with Accuracy: 0.5650
+Training complete. Best validation accuracy: 0.5650
+
+D:\GITHUB - Comparison of CNN Architectures for INTERCO\Comparison-of-Convolutional-Neural-Network-Architectures-for-INTERCO>py classify.py --cnn_type resnet-34 --n_classes 2 --path_to_dataset .\maritime-flags-dataset\small_balanced_two_flags --batch_size 32 --n_epochs 1 --learning_rate 0.001
+
+Configuration:
+Selected cnn type: resnet-34
+Number of classes: 2
+Path to dataset: .\maritime-flags-dataset\small_balanced_two_flags
+Number of epochs: 1
+Learning rate: 0.001
+Batch size: 32
+
+Epoch 1/1 - Training Loss: 0.4045
+Validation Results:
+  Accuracy: 0.9750
+  Precision: 0.9762
+  Recall: 0.9750
+  F1-score: 0.9750
+Best model saved with Accuracy: 0.9750
+Training complete. Best validation accuracy: 0.9750
+
+D:\GITHUB - Comparison of CNN Architectures for INTERCO\Comparison-of-Convolutional-Neural-Network-Architectures-for-INTERCO>py classify.py --cnn_type resnet-50 --n_classes 2 --path_to_dataset .\maritime-flags-dataset\small_balanced_two_flags --batch_size 32 --n_epochs 1 --learning_rate 0.001
+
+Configuration:
+Selected cnn type: resnet-50
+Number of classes: 2
+Path to dataset: .\maritime-flags-dataset\small_balanced_two_flags
+Number of epochs: 1
+Learning rate: 0.001
+Batch size: 32
+
+Epoch 1/1 - Training Loss: 0.2429
+Validation Results:
+  Accuracy: 0.9900
+  Precision: 0.9902
+  Recall: 0.9900
+  F1-score: 0.9900
+Best model saved with Accuracy: 0.9900
+Training complete. Best validation accuracy: 0.9900
+
+D:\GITHUB - Comparison of CNN Architectures for INTERCO\Comparison-of-Convolutional-Neural-Network-Architectures-for-INTERCO>py classify.py --cnn_type resnext --n_classes 2 --path_to_dataset .\maritime-flags-dataset\small_balanced_two_flags --batch_size 32 --n_epochs 1 --learning_rate 0.001
+
+Configuration:
+Selected cnn type: resnext
+Number of classes: 2
+Path to dataset: .\maritime-flags-dataset\small_balanced_two_flags
+Number of epochs: 1
+Learning rate: 0.001
+Batch size: 32
+
+Epoch 1/1 - Training Loss: 0.1923
+Validation Results:
+  Accuracy: 0.6400
+  Precision: 0.7907
+  Recall: 0.6400
+  F1-score: 0.5864
+Best model saved with Accuracy: 0.6400
+Training complete. Best validation accuracy: 0.6400
+
+D:\GITHUB - Comparison of CNN Architectures for INTERCO\Comparison-of-Convolutional-Neural-Network-Architectures-for-INTERCO>py classify.py --cnn_type mobilenetv2 --n_classes 2 --path_to_dataset .\maritime-flags-dataset\small_balanced_two_flags --batch_size 32 --n_epochs 1 --learning_rate 0.001
+
+Configuration:
+Selected cnn type: mobilenetv2
+Number of classes: 2
+Path to dataset: .\maritime-flags-dataset\small_balanced_two_flags
+Number of epochs: 1
+Learning rate: 0.001
+Batch size: 32
+
+Epoch 1/1 - Training Loss: 0.1914
+Validation Results:
+  Accuracy: 1.0000
+  Precision: 1.0000
+  Recall: 1.0000
+  F1-score: 1.0000
+Best model saved with Accuracy: 1.0000
+Training complete. Best validation accuracy: 1.0000
+
+D:\GITHUB - Comparison of CNN Architectures for INTERCO\Comparison-of-Convolutional-Neural-Network-Architectures-for-INTERCO>py classify.py --cnn_type efficientnet-b0 --n_classes 2 --path_to_dataset .\maritime-flags-dataset\small_balanced_two_flags --batch_size 32 --n_epochs 1 --learning_rate 0.001
+
+Configuration:
+Selected cnn type: efficientnet-b0
+Number of classes: 2
+Path to dataset: .\maritime-flags-dataset\small_balanced_two_flags
+Number of epochs: 1
+Learning rate: 0.001
+Batch size: 32
+
+Epoch 1/1 - Training Loss: 0.2362
+Validation Results:
+  Accuracy: 0.9850
+  Precision: 0.9854
+  Recall: 0.9850
+  F1-score: 0.9850
+Best model saved with Accuracy: 0.9850
+Training complete. Best validation accuracy: 0.9850
+
+D:\GITHUB - Comparison of CNN Architectures for INTERCO\Comparison-of-Convolutional-Neural-Network-Architectures-for-INTERCO>py classify.py --cnn_type efficientnet-b1 --n_classes 2 --path_to_dataset .\maritime-flags-dataset\small_balanced_two_flags --batch_size 32 --n_epochs 1 --learning_rate 0.001
+
+Configuration:
+Selected cnn type: efficientnet-b1
+Number of classes: 2
+Path to dataset: .\maritime-flags-dataset\small_balanced_two_flags
+Number of epochs: 1
+Learning rate: 0.001
+Batch size: 32
+
+Epoch 1/1 - Training Loss: 0.2568
+Validation Results:
+  Accuracy: 1.0000
+  Precision: 1.0000
+  Recall: 1.0000
+  F1-score: 1.0000
+Best model saved with Accuracy: 1.0000
+Training complete. Best validation accuracy: 1.0000
+
+D:\GITHUB - Comparison of CNN Architectures for INTERCO\Comparison-of-Convolutional-Neural-Network-Architectures-for-INTERCO>py classify.py --cnn_type cspnet --n_classes 2 --path_to_dataset .\maritime-flags-dataset\small_balanced_two_flags --batch_size 32 --n_epochs 1 --learning_rate 0.001
+
+Configuration:
+Selected cnn type: cspnet
+Number of classes: 2
+Path to dataset: .\maritime-flags-dataset\small_balanced_two_flags
+Number of epochs: 1
+Learning rate: 0.001
+Batch size: 32
+
+Epoch 1/1 - Training Loss: 0.2164
+Validation Results:
+  Accuracy: 0.9850
+  Precision: 0.9854
+  Recall: 0.9850
+  F1-score: 0.9850
+Best model saved with Accuracy: 0.9850
+Training complete. Best validation accuracy: 0.9850
+
+D:\GITHUB - Comparison of CNN Architectures for INTERCO\Comparison-of-Convolutional-Neural-Network-Architectures-for-INTERCO>py classify.py --cnn_type convnext --n_classes 2 --path_to_dataset .\maritime-flags-dataset\small_balanced_two_flags --batch_size 32 --n_epochs 1 --learning_rate 0.001
+
+Configuration:
+Selected cnn type: convnext
+Number of classes: 2
+Path to dataset: .\maritime-flags-dataset\small_balanced_two_flags
+Number of epochs: 1
+Learning rate: 0.001
+Batch size: 32
+
+Epoch 1/1 - Training Loss: 0.7428
+Validation Results:
+  Accuracy: 1.0000
+  Precision: 1.0000
+  Recall: 1.0000
+  F1-score: 1.0000
+Best model saved with Accuracy: 1.0000
+Training complete. Best validation accuracy: 1.0000
+
+D:\GITHUB - Comparison of CNN Architectures for INTERCO\Comparison-of-Convolutional-Neural-Network-Architectures-for-INTERCO>
