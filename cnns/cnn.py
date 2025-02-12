@@ -34,12 +34,28 @@ class CNN:
         recall = sklearn.metrics.recall_score(all_labels, all_preds, average="macro", zero_division=0)
         f1 = sklearn.metrics.f1_score(all_labels, all_preds, average="macro", zero_division=0)
 
+        # Compute per-class metrics
+        class_precisions = sklearn.metrics.precision_score(all_labels, all_preds, average=None, zero_division=0)
+        class_recalls = sklearn.metrics.recall_score(all_labels, all_preds, average=None, zero_division=0)
+        class_f1s = sklearn.metrics.f1_score(all_labels, all_preds, average=None, zero_division=0)
+        class_report = sklearn.metrics.classification_report(all_labels, all_preds, zero_division=0)
+
         print("Validation Results:")
         print(f"  Accuracy: {accuracy:.4f}")
         print(f"  Precision: {precision:.4f}")
         print(f"  Recall: {recall:.4f}")
         print(f"  F1-score: {f1:.4f}")
 
+        output_metrics = "Per-Class Metrics:\n"
+        print("\nPer-Class Metrics:")
+        for i, (prec, rec, f1) in enumerate(zip(class_precisions, class_recalls, class_f1s)):
+            output_metrics = output_metrics + f"  Class {i}: Precision: {prec:.4f}, Recall: {rec:.4f}, F1-score: {f1:.4f}\n"
+            print(f"  Class {i}: Precision: {prec:.4f}, Recall: {rec:.4f}, F1-score: {f1:.4f}")
+        
+        file = open(f".\\results\{cnn_name}_metrics.txt", "a")
+        file.write(output_metrics)
+        file.close()    
+        
         self.plot_precision_recall_curve(all_labels, np.array(all_probs), class_names, cnn_name)
         self.plot_precision_confidence_chart(all_labels, np.array(all_probs), class_names, cnn_name)
 
@@ -47,30 +63,56 @@ class CNN:
     
     # Plot Precision-Recall Curve
     def plot_precision_recall_curve(self, labels, probs, class_names, cnn_name):
+        plt.rcParams["figure.autolayout"] = True
         plt.figure(figsize=(8, 6))
+        all_precisions_recall = []
+        all_recalls = []
+
         for i, class_name in enumerate(class_names):
             precision, recall, _ = sklearn.metrics.precision_recall_curve((np.array(labels) == i).astype(int), probs[:, i])
-            plt.plot(recall, precision, label=f"{class_name}")
+            all_precisions_recall.append(precision)
+            all_recalls.append(recall)
+            plt.plot(recall, precision, color='gray')
+            
+        # Compute average precision-recall line
+        common_recalls = np.linspace(0, 1, 100)  # Define common recall values
+        interp_precisions_recall = [np.interp(common_recalls, all_recalls[i][::-1], all_precisions_recall[i][::-1]) for i in range(len(class_names))]
+        avg_precisions_recall = np.mean(interp_precisions_recall, axis=0)
+        plt.plot(common_recalls, avg_precisions_recall, color='blue', linewidth=2)
         plt.xlabel("Recall")
         plt.ylabel("Precision")
         plt.title("Precision-Recall Curve")
-        plt.legend()
-        plt.grid()
-        plt.savefig(f"{cnn_name}_Precision_recall.png")
+        plt.grid(False)
+        plt.xlim([0, 1.0])
+        plt.ylim([0, 1.0])
+        plt.savefig(f".\\results\{cnn_name}_Precision_recall.png")
 
     # Plot Precision vs Confidence Threshold
     def plot_precision_confidence_chart(self, labels, probs, class_names, cnn_name):
+        plt.rcParams["figure.autolayout"] = True
         plt.figure(figsize=(8, 6))
+        all_precisions = []
+        all_thresholds = []
+
         for i, class_name in enumerate(class_names):
             sorted_probs = np.sort(probs[:, i])[::-1]
             precisions = [sklearn.metrics.precision_score((np.array(labels) == i).astype(int), probs[:, i] >= t, zero_division=0) for t in sorted_probs]
-            plt.plot(sorted_probs, precisions, label=f"{class_name}")
-        plt.xlabel("Confidence Threshold")
+            all_precisions.append(precisions)
+            all_thresholds.append(sorted_probs)
+            plt.plot(sorted_probs, precisions, color="gray")
+
+        # Compute average precision line
+        common_thresholds = np.linspace(0, 1, 100)  # Define common thresholds
+        interp_precisions = [np.interp(common_thresholds, all_thresholds[i][::-1], all_precisions[i][::-1]) for i in range(len(class_names))]
+        avg_precisions = np.mean(interp_precisions, axis=0)
+        plt.plot(common_thresholds, avg_precisions, color='blue', linewidth=2)
+        plt.xlabel("Confidence")
         plt.ylabel("Precision")
-        plt.title("Precision vs Confidence")
-        plt.legend()
-        plt.grid()
-        plt.savefig(f"{cnn_name}_Precision_confidence.png")
+        plt.title("Precision-Confidence Curve")
+        plt.grid(False)
+        plt.xlim([0, 1.0])
+        plt.ylim([0, 1.0])
+        plt.savefig(f".\\results\{cnn_name}_Precision_confidence.png")
 
     # Prediction function common to all models
     def predict(self, image_path, cnn_model):
