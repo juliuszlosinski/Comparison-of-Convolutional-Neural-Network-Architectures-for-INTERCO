@@ -26,7 +26,7 @@ This study search for the best classification CNN based network for INTERCO flag
 - ConvNeXt (2022) (transformer inspired architecture) [13].
 
 ## 1. UML
-TODO
+![Comparison-CNN-Arch](https://github.com/user-attachments/assets/c5f42e9d-dbe9-4cc2-8819-27452d1a24bc)
 
 ## 2. Project organization
 ```
