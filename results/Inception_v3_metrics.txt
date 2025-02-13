@@ -1,0 +1,4 @@
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9800, Precision: 0.9608, Recall: 0.9800, F1-score: 0.9703
+  Class 1: Accuracy: 0.9600, Precision: 0.9796, Recall: 0.9600, F1-score: 0.9697
+Avarage: Accuracy: 0.9700, Precision: 0.9702, Recall: 0.9700, F1-Score: 0.9697

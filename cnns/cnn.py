@@ -33,12 +33,21 @@ class CNN:
         precision = sklearn.metrics.precision_score(all_labels, all_preds, average="macro", zero_division=0)
         recall = sklearn.metrics.recall_score(all_labels, all_preds, average="macro", zero_division=0)
         f1 = sklearn.metrics.f1_score(all_labels, all_preds, average="macro", zero_division=0)
-
+        
         # Compute per-class metrics
         class_precisions = sklearn.metrics.precision_score(all_labels, all_preds, average=None, zero_division=0)
         class_recalls = sklearn.metrics.recall_score(all_labels, all_preds, average=None, zero_division=0)
         class_f1s = sklearn.metrics.f1_score(all_labels, all_preds, average=None, zero_division=0)
-        class_report = sklearn.metrics.classification_report(all_labels, all_preds, zero_division=0)
+        class_report = sklearn.metrics.classification_report(all_labels, all_preds, zero_division=0, output_dict=True)
+
+        # Compute per-class accuracy
+        labels = np.unique(all_labels)
+        class_accuracies = []
+        for label in labels:
+            correct = np.sum((all_preds == label) & (all_labels == label))
+            total = np.sum(all_labels == label)
+            accuracy_per = correct / total if total > 0 else 0
+            class_accuracies.append(accuracy_per)
 
         print("Validation Results:")
         print(f"  Accuracy: {accuracy:.4f}")
@@ -48,13 +57,16 @@ class CNN:
 
         output_metrics = "Per-Class Metrics:\n"
         print("\nPer-Class Metrics:")
-        for i, (prec, rec, f1) in enumerate(zip(class_precisions, class_recalls, class_f1s)):
-            output_metrics = output_metrics + f"  Class {i}: Precision: {prec:.4f}, Recall: {rec:.4f}, F1-score: {f1:.4f}\n"
-            print(f"  Class {i}: Precision: {prec:.4f}, Recall: {rec:.4f}, F1-score: {f1:.4f}")
+        for i, (prec, rec, f1, acc) in enumerate(zip(class_precisions, class_recalls, class_f1s, class_accuracies)):
+            output_metrics += f"  Class {i}: Accuracy: {acc:.4f}, Precision: {prec:.4f}, Recall: {rec:.4f}, F1-score: {f1:.4f}\n"
+            print(f"  Class {i}: Accuracy: {acc:.4f}, Precision: {prec:.4f}, Recall: {rec:.4f}, F1-score: {f1:.4f}")
         
-        file = open(f".\\results\{cnn_name}_metrics.txt", "a")
+        file = open(f".\\results\{cnn_name}_metrics.txt", "w+")
         file.write(output_metrics)
+        output_average = f"Avarage: Accuracy: {accuracy:.4f}, Precision: {precision:.4f}, Recall: {recall:.4f}, F1-Score: {f1:.4f}"
+        file.write(output_average)
         file.close()    
+        print(f"{output_average}\n")
         
         self.plot_precision_recall_curve(all_labels, np.array(all_probs), class_names, cnn_name)
         self.plot_precision_confidence_chart(all_labels, np.array(all_probs), class_names, cnn_name)
