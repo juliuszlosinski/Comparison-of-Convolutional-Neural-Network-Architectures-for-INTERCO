@@ -55,19 +55,27 @@ class CNN:
         print(f"  Recall: {recall:.4f}")
         print(f"  F1-score: {f1:.4f}")
 
+        file_csv = open(f".\\results\{cnn_name}_metrics.csv", "w+")
+        file_csv.write("class, accuracy, precision, recall, f1-score\n")
+        
         output_metrics = "Per-Class Metrics:\n"
+        
         print("\nPer-Class Metrics:")
         for i, (prec, rec, f1, acc) in enumerate(zip(class_precisions, class_recalls, class_f1s, class_accuracies)):
             output_metrics += f"  Class {i}: Accuracy: {acc:.4f}, Precision: {prec:.4f}, Recall: {rec:.4f}, F1-score: {f1:.4f}\n"
             print(f"  Class {i}: Accuracy: {acc:.4f}, Precision: {prec:.4f}, Recall: {rec:.4f}, F1-score: {f1:.4f}")
-        
+            file_csv.write(f"{i}, {acc:.4f}, {prec:.4f}, {rec:.4f}, {f1:.4f}\n")
+            
         file = open(f".\\results\{cnn_name}_metrics.txt", "w+")
         file.write(output_metrics)
-        output_average = f"Avarage: Accuracy: {accuracy:.4f}, Precision: {precision:.4f}, Recall: {recall:.4f}, F1-Score: {f1:.4f}"
+        output_average = f"Average: Accuracy: {accuracy:.4f}, Precision: {precision:.4f}, Recall: {recall:.4f}, F1-Score: {f1:.4f}"
         file.write(output_average)
         file.close()    
         print(f"{output_average}\n")
         
+        file_csv.write(f"average, {accuracy:.4f}, {precision:.4f}, {recall:.4f}, {f1:.4f}")
+        file_csv.close()
+                
         self.plot_precision_recall_curve(all_labels, np.array(all_probs), class_names, cnn_name)
         self.plot_precision_confidence_chart(all_labels, np.array(all_probs), class_names, cnn_name)
 
