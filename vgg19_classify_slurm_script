@@ -2,18 +2,20 @@
 
 #SBATCH -J vgg19JL                                      # nazwa zadania
 #SBATCH -p batch                                        # nazwa kolejki [test, batch]
-#SBATCH -N 1                                            # ilosc wezlow (default 1)
-#SBATCH --ntasks-per-node 48                            # ilosc rdzeni w wezle [max=48 (default)]
-#SBATCH --mem 25000                                     # ilosc pamieci na realizacjÄ™ zadania na wezeÅ‚ [MB]
-#SBATCH --time 24:00:00                                 # okreÅ›lenie czasu dla zadania [test(max)=15 min.; batch(max)=3 dni]
-#SBATCH --mail-type=END                                 # powiadomienie o koncu dzialania zadania na adres mail
-#SBATCH --mail-user=j.losinski@wi.umg.edu.pl            # wyslanie wiadomosci o zadaniu na wybrany adres
+#SBATCH -N 1                                            # iloœæ wêz³ów (default 1)
+#SBATCH --ntasks-per-node=48                            # iloœæ rdzeni w wêŸle [max=48 (default)]
+#SBATCH --mem=25000                                     # iloœæ pamiêci na realizacjê zadania na wêze³ [MB]
+#SBATCH --time=24:00:00                                 # okreœlenie czasu dla zadania [test(max)=15 min.; batch(max)=3 dni]
+#SBATCH --mail-type=END                                 # powiadomienie o koñcu dzia³ania zadania na adres mail
+#SBATCH --mail-user=j.losinski@wi.umg.edu.pl            # wys³anie wiadomoœci o zadaniu na wybrany adres
 
-# 1. Wczytanie moduÅ‚ow
+# 1. Wczytanie modu³ów
 module load trytonp/python3/3.11.7
 
-# 2. Pobranie moduÅ‚ow
-pip3 install -r requirements.txt
+# 2. Pobranie modu³ów
+pip3 install --user -r requirements.txt
 
 # 3. Uruchomienie skryptu
-python3 classify.py --cnn_type vgg19 --n_classes 26 --path_to_dataset .\maritime-flags-dataset\SMOTE_balanced_flags --batch_size 32 --n_epochs 100 --learning_rate 0.001
+python3 classify.py --cnn_type vgg19 --n_classes 26 \
+    --path_to_dataset ./maritime-flags-dataset/SMOTE_balanced_flags \
+    --batch_size 32 --n_epochs 100 --learning_rate 0.001

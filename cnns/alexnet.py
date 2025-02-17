@@ -63,6 +63,7 @@ class AlexNet(CNN):
 
             # Validating, printing and drawing results curves.
             val_accuracy, val_metrics = self.validate(validation_loader, validation_dataset.classes, self.cnn_model, self.cnn_name)
+            print("Validated!")
 
             if val_accuracy > best_val_accuracy:
                 best_val_accuracy = val_accuracy
