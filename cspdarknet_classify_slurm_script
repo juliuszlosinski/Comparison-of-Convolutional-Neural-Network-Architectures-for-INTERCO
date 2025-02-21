@@ -1,0 +1,21 @@
+#!/bin/bash -l
+
+#SBATCH -J vgg19JL                                      # nazwa zadania
+#SBATCH -p batch                                        # nazwa kolejki [test, batch]
+#SBATCH -N 1                                            # ilo�� w�z��w (default 1)
+#SBATCH --ntasks-per-node=48                            # ilo�� rdzeni w w�le [max=48 (default)]
+#SBATCH --mem=25000                                     # ilo�� pami�ci na realizacj� zadania na w�ze� [MB]
+#SBATCH --time=24:00:00                                 # okre�lenie czasu dla zadania [test(max)=15 min.; batch(max)=3 dni]
+#SBATCH --mail-type=END                                 # powiadomienie o ko�cu dzia�ania zadania na adres mail
+#SBATCH --mail-user=j.losinski@wi.umg.edu.pl            # wys�anie wiadomo�ci o zadaniu na wybrany adres
+
+# 1. Wczytanie modu��w
+module load trytonp/python3/3.11.7
+
+# 2. Pobranie modu��w
+pip3 install --user -r requirements.txt
+
+# 3. Uruchomienie skryptu
+python3 classify.py --cnn_type cspdarknet --n_classes 26 \
+    --path_to_dataset ./maritime-flags-dataset/SMOTE_balanced_flags \
+    --batch_size 32 --n_epochs 100 --learning_rate 0.001

@@ -7,6 +7,7 @@ from cnns.mobilenet import MobileNet
 from cnns.efficientnet import EfficientNet
 from cnns.cspnet import CSPNet
 from cnns.convnext import ConvNeXt
+from cnns.cspdarknet import CSPDarknetModel
 import argparse
 import warnings
 
@@ -47,6 +48,7 @@ CNN_TYPES = [
     "efficientnet-b0",
     "efficientnet-b1",
     "cspnet",
+    "cspdarknet",
     "convnext"
 ]
 
@@ -116,6 +118,8 @@ if __name__ == '__main__':
         cnn_model = EfficientNet(number_of_classes, "efficientnet_b1")
     elif cnn_type == "cspnet":
         cnn_model = CSPNet(number_of_classes)
+    elif cnn_type == "cspdarknet":
+        cnn_model = CSPDarknetModel(number_of_classes)
     elif cnn_type == "convnext":
         cnn_model = ConvNeXt(number_of_classes)
         
