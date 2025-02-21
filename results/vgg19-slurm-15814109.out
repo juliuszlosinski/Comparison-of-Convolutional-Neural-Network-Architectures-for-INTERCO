@@ -1,0 +1,1621 @@
+ trytonp/compiler/gcc/13.2.0 load complete.
+ trytonp/python3/3.11.7 load complete.
+
+Loading trytonp/python3/3.11.7
+  Loading requirement: trytonp/compiler/gcc/13.2.0
+Requirement already satisfied: numpy in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from -r requirements.txt (line 1)) (2.2.2)
+Requirement already satisfied: matplotlib in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from -r requirements.txt (line 2)) (3.10.0)
+Requirement already satisfied: scikit-learn in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from -r requirements.txt (line 3)) (1.6.1)
+Requirement already satisfied: torch in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from -r requirements.txt (line 4)) (2.6.0)
+Requirement already satisfied: torchvision in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from -r requirements.txt (line 5)) (0.21.0)
+Requirement already satisfied: contourpy>=1.0.1 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from matplotlib->-r requirements.txt (line 2)) (1.3.1)
+Requirement already satisfied: cycler>=0.10 in /apl/trytonp/python/3.11.7/lib/python3.11/site-packages (from matplotlib->-r requirements.txt (line 2)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from matplotlib->-r requirements.txt (line 2)) (4.55.3)
+Requirement already satisfied: kiwisolver>=1.3.1 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from matplotlib->-r requirements.txt (line 2)) (1.4.7)
+Requirement already satisfied: packaging>=20.0 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from matplotlib->-r requirements.txt (line 2)) (24.2)
+Requirement already satisfied: pillow>=8 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from matplotlib->-r requirements.txt (line 2)) (11.0.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from matplotlib->-r requirements.txt (line 2)) (3.2.0)
+Requirement already satisfied: python-dateutil>=2.7 in /apl/trytonp/python/3.11.7/lib/python3.11/site-packages (from matplotlib->-r requirements.txt (line 2)) (2.9.0.post0)
+Requirement already satisfied: scipy>=1.6.0 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from scikit-learn->-r requirements.txt (line 3)) (1.14.1)
+Requirement already satisfied: joblib>=1.2.0 in /apl/trytonp/python/3.11.7/lib/python3.11/site-packages (from scikit-learn->-r requirements.txt (line 3)) (1.4.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in /apl/trytonp/python/3.11.7/lib/python3.11/site-packages (from scikit-learn->-r requirements.txt (line 3)) (3.5.0)
+Requirement already satisfied: filelock in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (3.16.1)
+Requirement already satisfied: typing-extensions>=4.10.0 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (4.12.2)
+Requirement already satisfied: networkx in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (3.4.2)
+Requirement already satisfied: jinja2 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (3.1.5)
+Requirement already satisfied: fsspec in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (2024.12.0)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.4.127 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (12.4.127)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.4.127 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (12.4.127)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.4.127 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (12.4.127)
+Requirement already satisfied: nvidia-cudnn-cu12==9.1.0.70 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (9.1.0.70)
+Requirement already satisfied: nvidia-cublas-cu12==12.4.5.8 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (12.4.5.8)
+Requirement already satisfied: nvidia-cufft-cu12==11.2.1.3 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (11.2.1.3)
+Requirement already satisfied: nvidia-curand-cu12==10.3.5.147 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (10.3.5.147)
+Requirement already satisfied: nvidia-cusolver-cu12==11.6.1.9 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (11.6.1.9)
+Requirement already satisfied: nvidia-cusparse-cu12==12.3.1.170 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (12.3.1.170)
+Requirement already satisfied: nvidia-cusparselt-cu12==0.6.2 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (0.6.2)
+Requirement already satisfied: nvidia-nccl-cu12==2.21.5 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (2.21.5)
+Requirement already satisfied: nvidia-nvtx-cu12==12.4.127 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (12.4.127)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.4.127 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (12.4.127)
+Requirement already satisfied: triton==3.2.0 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (3.2.0)
+Requirement already satisfied: sympy==1.13.1 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from torch->-r requirements.txt (line 4)) (1.13.1)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from sympy==1.13.1->torch->-r requirements.txt (line 4)) (1.3.0)
+Requirement already satisfied: six>=1.5 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from python-dateutil>=2.7->matplotlib->-r requirements.txt (line 2)) (1.17.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /users/kdm/juliuszl/.local/lib/python3.11/site-packages (from jinja2->torch->-r requirements.txt (line 4)) (3.0.2)
+
+[notice] A new release of pip is available: 23.2.1 -> 25.0.1
+[notice] To update, run: pip3 install --upgrade pip
+/users/kdm/juliuszl/.local/lib/python3.11/site-packages/torchvision/models/_utils.py:208: UserWarning: The parameter 'pretrained' is deprecated since 0.13 and may be removed in the future, please use 'weights' instead.
+  warnings.warn(
+/users/kdm/juliuszl/.local/lib/python3.11/site-packages/torchvision/models/_utils.py:223: UserWarning: Arguments other than a weight enum or `None` for 'weights' are deprecated since 0.13 and may be removed in the future. The current behavior is equivalent to passing `weights=VGG19_Weights.IMAGENET1K_V1`. You can also use `weights=VGG19_Weights.DEFAULT` to get the most up-to-date weights.
+  warnings.warn(msg)
+
+Configuration:
+Selected cnn type: vgg19
+Number of classes: 26
+Path to dataset: ./maritime-flags-dataset/SMOTE_balanced_flags
+Number of epochs: 100
+Learning rate: 0.001
+Batch size: 32
+
+Epoch 1/100 - Training Loss: 1.9014
+Validation Results:
+  Accuracy: 0.9177
+  Precision: 0.9229
+  Recall: 0.9177
+  F1-score: 0.9174
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.7400, Precision: 0.9487, Recall: 0.7400, F1-score: 0.8315
+  Class 1: Accuracy: 0.8700, Precision: 0.8878, Recall: 0.8700, F1-score: 0.8788
+  Class 2: Accuracy: 0.9400, Precision: 0.8034, Recall: 0.9400, F1-score: 0.8664
+  Class 3: Accuracy: 0.7000, Precision: 0.8750, Recall: 0.7000, F1-score: 0.7778
+  Class 4: Accuracy: 0.9600, Precision: 0.7805, Recall: 0.9600, F1-score: 0.8610
+  Class 5: Accuracy: 0.9500, Precision: 0.9500, Recall: 0.9500, F1-score: 0.9500
+  Class 6: Accuracy: 0.8900, Precision: 0.7607, Recall: 0.8900, F1-score: 0.8203
+  Class 7: Accuracy: 0.7800, Precision: 0.9070, Recall: 0.7800, F1-score: 0.8387
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 0.9300, Precision: 0.8304, Recall: 0.9300, F1-score: 0.8774
+  Class 10: Accuracy: 0.9600, Precision: 0.9697, Recall: 0.9600, F1-score: 0.9648
+  Class 11: Accuracy: 0.9600, Precision: 0.9697, Recall: 0.9600, F1-score: 0.9648
+  Class 12: Accuracy: 0.9600, Precision: 0.9412, Recall: 0.9600, F1-score: 0.9505
+  Class 13: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 14: Accuracy: 0.9600, Precision: 0.8067, Recall: 0.9600, F1-score: 0.8767
+  Class 15: Accuracy: 0.9600, Precision: 0.9897, Recall: 0.9600, F1-score: 0.9746
+  Class 16: Accuracy: 0.9900, Precision: 0.9900, Recall: 0.9900, F1-score: 0.9900
+  Class 17: Accuracy: 0.8400, Precision: 0.9438, Recall: 0.8400, F1-score: 0.8889
+  Class 18: Accuracy: 1.0000, Precision: 0.9434, Recall: 1.0000, F1-score: 0.9709
+  Class 19: Accuracy: 0.8400, Precision: 0.9545, Recall: 0.8400, F1-score: 0.8936
+  Class 20: Accuracy: 0.9600, Precision: 0.9796, Recall: 0.9600, F1-score: 0.9697
+  Class 21: Accuracy: 0.9500, Precision: 1.0000, Recall: 0.9500, F1-score: 0.9744
+  Class 22: Accuracy: 0.8400, Precision: 0.9545, Recall: 0.8400, F1-score: 0.8936
+  Class 23: Accuracy: 0.9100, Precision: 0.9891, Recall: 0.9100, F1-score: 0.9479
+  Class 24: Accuracy: 0.9800, Precision: 0.9703, Recall: 0.9800, F1-score: 0.9751
+  Class 25: Accuracy: 0.9900, Precision: 0.8684, Recall: 0.9900, F1-score: 0.9252
+Average: Accuracy: 0.9177, Precision: 0.9229, Recall: 0.9177, F1-Score: 0.9252
+
+Best model saved with Accuracy: 0.9177
+Epoch 2/100 - Training Loss: 0.5738
+Validation Results:
+  Accuracy: 0.9469
+  Precision: 0.9523
+  Recall: 0.9469
+  F1-score: 0.9476
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9700, Precision: 0.6978, Recall: 0.9700, F1-score: 0.8117
+  Class 1: Accuracy: 0.9000, Precision: 1.0000, Recall: 0.9000, F1-score: 0.9474
+  Class 2: Accuracy: 0.9700, Precision: 0.9065, Recall: 0.9700, F1-score: 0.9372
+  Class 3: Accuracy: 0.9700, Precision: 0.8818, Recall: 0.9700, F1-score: 0.9238
+  Class 4: Accuracy: 0.9600, Precision: 0.8972, Recall: 0.9600, F1-score: 0.9275
+  Class 5: Accuracy: 0.9400, Precision: 0.9691, Recall: 0.9400, F1-score: 0.9543
+  Class 6: Accuracy: 0.8700, Precision: 0.9886, Recall: 0.8700, F1-score: 0.9255
+  Class 7: Accuracy: 0.8700, Precision: 0.8788, Recall: 0.8700, F1-score: 0.8744
+  Class 8: Accuracy: 0.9500, Precision: 1.0000, Recall: 0.9500, F1-score: 0.9744
+  Class 9: Accuracy: 0.8800, Precision: 0.9462, Recall: 0.8800, F1-score: 0.9119
+  Class 10: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+  Class 11: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 12: Accuracy: 0.9600, Precision: 0.9143, Recall: 0.9600, F1-score: 0.9366
+  Class 13: Accuracy: 0.9400, Precision: 1.0000, Recall: 0.9400, F1-score: 0.9691
+  Class 14: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 15: Accuracy: 0.8500, Precision: 1.0000, Recall: 0.8500, F1-score: 0.9189
+  Class 16: Accuracy: 0.9700, Precision: 0.9700, Recall: 0.9700, F1-score: 0.9700
+  Class 17: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 18: Accuracy: 1.0000, Precision: 0.9346, Recall: 1.0000, F1-score: 0.9662
+  Class 19: Accuracy: 0.9200, Precision: 0.9787, Recall: 0.9200, F1-score: 0.9485
+  Class 20: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 21: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 22: Accuracy: 0.9800, Precision: 0.9608, Recall: 0.9800, F1-score: 0.9703
+  Class 23: Accuracy: 0.8000, Precision: 0.9524, Recall: 0.8000, F1-score: 0.8696
+  Class 24: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 25: Accuracy: 0.9800, Precision: 0.9608, Recall: 0.9800, F1-score: 0.9703
+Average: Accuracy: 0.9469, Precision: 0.9523, Recall: 0.9469, F1-Score: 0.9703
+
+Best model saved with Accuracy: 0.9469
+Epoch 3/100 - Training Loss: 0.4461
+Validation Results:
+  Accuracy: 0.9777
+  Precision: 0.9784
+  Recall: 0.9777
+  F1-score: 0.9777
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.8800, Precision: 0.9670, Recall: 0.8800, F1-score: 0.9215
+  Class 1: Accuracy: 0.9400, Precision: 0.9216, Recall: 0.9400, F1-score: 0.9307
+  Class 2: Accuracy: 0.9800, Precision: 0.9159, Recall: 0.9800, F1-score: 0.9469
+  Class 3: Accuracy: 0.9600, Precision: 0.9600, Recall: 0.9600, F1-score: 0.9600
+  Class 4: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 5: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 6: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 7: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 0.9900, Precision: 0.9612, Recall: 0.9900, F1-score: 0.9754
+  Class 10: Accuracy: 0.9900, Precision: 0.9900, Recall: 0.9900, F1-score: 0.9900
+  Class 11: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 12: Accuracy: 1.0000, Precision: 0.9346, Recall: 1.0000, F1-score: 0.9662
+  Class 13: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 14: Accuracy: 0.9800, Precision: 0.9899, Recall: 0.9800, F1-score: 0.9849
+  Class 15: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 16: Accuracy: 0.9900, Precision: 0.9802, Recall: 0.9900, F1-score: 0.9851
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 0.9174, Recall: 1.0000, F1-score: 0.9569
+  Class 19: Accuracy: 0.9700, Precision: 0.9798, Recall: 0.9700, F1-score: 0.9749
+  Class 20: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 21: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 22: Accuracy: 0.9500, Precision: 0.9896, Recall: 0.9500, F1-score: 0.9694
+  Class 23: Accuracy: 0.9500, Precision: 1.0000, Recall: 0.9500, F1-score: 0.9744
+  Class 24: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 25: Accuracy: 0.9900, Precision: 0.9706, Recall: 0.9900, F1-score: 0.9802
+Average: Accuracy: 0.9777, Precision: 0.9784, Recall: 0.9777, F1-Score: 0.9802
+
+Best model saved with Accuracy: 0.9777
+Epoch 4/100 - Training Loss: 0.3595
+Validation Results:
+  Accuracy: 0.9738
+  Precision: 0.9755
+  Recall: 0.9738
+  F1-score: 0.9735
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.8900, Precision: 1.0000, Recall: 0.8900, F1-score: 0.9418
+  Class 1: Accuracy: 0.9700, Precision: 0.8435, Recall: 0.9700, F1-score: 0.9023
+  Class 2: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 3: Accuracy: 0.9700, Precision: 0.9417, Recall: 0.9700, F1-score: 0.9557
+  Class 4: Accuracy: 1.0000, Precision: 0.9615, Recall: 1.0000, F1-score: 0.9804
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 0.9400, Precision: 0.9895, Recall: 0.9400, F1-score: 0.9641
+  Class 7: Accuracy: 0.7500, Precision: 1.0000, Recall: 0.7500, F1-score: 0.8571
+  Class 8: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 9: Accuracy: 0.9600, Precision: 0.9897, Recall: 0.9600, F1-score: 0.9746
+  Class 10: Accuracy: 0.9900, Precision: 0.9083, Recall: 0.9900, F1-score: 0.9474
+  Class 11: Accuracy: 1.0000, Precision: 0.9434, Recall: 1.0000, F1-score: 0.9709
+  Class 12: Accuracy: 1.0000, Precision: 0.9615, Recall: 1.0000, F1-score: 0.9804
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 16: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 0.9800, Precision: 0.9899, Recall: 0.9800, F1-score: 0.9849
+  Class 19: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 20: Accuracy: 0.9600, Precision: 0.9897, Recall: 0.9600, F1-score: 0.9746
+  Class 21: Accuracy: 0.9900, Precision: 0.9900, Recall: 0.9900, F1-score: 0.9900
+  Class 22: Accuracy: 1.0000, Precision: 0.9434, Recall: 1.0000, F1-score: 0.9709
+  Class 23: Accuracy: 0.9700, Precision: 0.9510, Recall: 0.9700, F1-score: 0.9604
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+Average: Accuracy: 0.9738, Precision: 0.9755, Recall: 0.9738, F1-Score: 0.9950
+
+Epoch 5/100 - Training Loss: 0.3683
+Validation Results:
+  Accuracy: 0.9873
+  Precision: 0.9876
+  Recall: 0.9873
+  F1-score: 0.9873
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9400, Precision: 0.9691, Recall: 0.9400, F1-score: 0.9543
+  Class 1: Accuracy: 0.9700, Precision: 0.9510, Recall: 0.9700, F1-score: 0.9604
+  Class 2: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 3: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 4: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 5: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 6: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 7: Accuracy: 1.0000, Precision: 0.9346, Recall: 1.0000, F1-score: 0.9662
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 11: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+  Class 12: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 15: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 0.9900, Precision: 0.9900, Recall: 0.9900, F1-score: 0.9900
+  Class 19: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 20: Accuracy: 0.9700, Precision: 0.9898, Recall: 0.9700, F1-score: 0.9798
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 23: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 24: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 25: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+Average: Accuracy: 0.9873, Precision: 0.9876, Recall: 0.9873, F1-Score: 0.9852
+
+Best model saved with Accuracy: 0.9873
+Epoch 6/100 - Training Loss: 0.2847
+Validation Results:
+  Accuracy: 0.9892
+  Precision: 0.9893
+  Recall: 0.9892
+  F1-score: 0.9892
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9200, Precision: 0.9684, Recall: 0.9200, F1-score: 0.9436
+  Class 1: Accuracy: 0.9900, Precision: 0.9519, Recall: 0.9900, F1-score: 0.9706
+  Class 2: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 3: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 4: Accuracy: 0.9800, Precision: 0.9800, Recall: 0.9800, F1-score: 0.9800
+  Class 5: Accuracy: 0.9900, Precision: 0.9802, Recall: 0.9900, F1-score: 0.9851
+  Class 6: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 7: Accuracy: 0.9700, Precision: 0.9700, Recall: 0.9700, F1-score: 0.9700
+  Class 8: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 9: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 10: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 11: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 12: Accuracy: 0.9800, Precision: 0.9800, Recall: 0.9800, F1-score: 0.9800
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+  Class 19: Accuracy: 0.9900, Precision: 0.9900, Recall: 0.9900, F1-score: 0.9900
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 22: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 23: Accuracy: 0.9600, Precision: 0.9796, Recall: 0.9600, F1-score: 0.9697
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9892, Precision: 0.9893, Recall: 0.9892, F1-Score: 1.0000
+
+Best model saved with Accuracy: 0.9892
+Epoch 7/100 - Training Loss: 0.2306
+Validation Results:
+  Accuracy: 0.9862
+  Precision: 0.9868
+  Recall: 0.9862
+  F1-score: 0.9862
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9600, Precision: 0.9143, Recall: 0.9600, F1-score: 0.9366
+  Class 1: Accuracy: 0.9300, Precision: 0.9894, Recall: 0.9300, F1-score: 0.9588
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 0.9700, Precision: 0.9898, Recall: 0.9700, F1-score: 0.9798
+  Class 4: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 7: Accuracy: 1.0000, Precision: 0.9615, Recall: 1.0000, F1-score: 0.9804
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+  Class 11: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 12: Accuracy: 0.9900, Precision: 0.9802, Recall: 0.9900, F1-score: 0.9851
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 0.9091, Recall: 1.0000, F1-score: 0.9524
+  Class 15: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 16: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 17: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 18: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+  Class 19: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 20: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 23: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+Average: Accuracy: 0.9862, Precision: 0.9868, Recall: 0.9862, F1-Score: 0.9899
+
+Epoch 8/100 - Training Loss: 0.2807
+Validation Results:
+  Accuracy: 0.9723
+  Precision: 0.9753
+  Recall: 0.9723
+  F1-score: 0.9721
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.8600, Precision: 1.0000, Recall: 0.8600, F1-score: 0.9247
+  Class 1: Accuracy: 1.0000, Precision: 0.9524, Recall: 1.0000, F1-score: 0.9756
+  Class 2: Accuracy: 1.0000, Precision: 0.9615, Recall: 1.0000, F1-score: 0.9804
+  Class 3: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 4: Accuracy: 1.0000, Precision: 0.9615, Recall: 1.0000, F1-score: 0.9804
+  Class 5: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 6: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 7: Accuracy: 0.9600, Precision: 0.9412, Recall: 0.9600, F1-score: 0.9505
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 0.8200, Precision: 0.9880, Recall: 0.8200, F1-score: 0.8962
+  Class 10: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 11: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 12: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 15: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 16: Accuracy: 1.0000, Precision: 0.8130, Recall: 1.0000, F1-score: 0.8969
+  Class 17: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 18: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 19: Accuracy: 1.0000, Precision: 0.8475, Recall: 1.0000, F1-score: 0.9174
+  Class 20: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 23: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 24: Accuracy: 0.7900, Precision: 1.0000, Recall: 0.7900, F1-score: 0.8827
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9723, Precision: 0.9753, Recall: 0.9723, F1-Score: 1.0000
+
+Epoch 9/100 - Training Loss: 0.2414
+Validation Results:
+  Accuracy: 0.9727
+  Precision: 0.9745
+  Recall: 0.9727
+  F1-score: 0.9726
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.8700, Precision: 1.0000, Recall: 0.8700, F1-score: 0.9305
+  Class 1: Accuracy: 1.0000, Precision: 0.9174, Recall: 1.0000, F1-score: 0.9569
+  Class 2: Accuracy: 0.9600, Precision: 0.9412, Recall: 0.9600, F1-score: 0.9505
+  Class 3: Accuracy: 0.9700, Precision: 0.9898, Recall: 0.9700, F1-score: 0.9798
+  Class 4: Accuracy: 0.9600, Precision: 0.9897, Recall: 0.9600, F1-score: 0.9746
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 7: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 0.9800, Precision: 0.9333, Recall: 0.9800, F1-score: 0.9561
+  Class 10: Accuracy: 0.9900, Precision: 0.9802, Recall: 0.9900, F1-score: 0.9851
+  Class 11: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 12: Accuracy: 0.9800, Precision: 0.9703, Recall: 0.9800, F1-score: 0.9751
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 0.9000, Precision: 0.9890, Recall: 0.9000, F1-score: 0.9424
+  Class 15: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 16: Accuracy: 1.0000, Precision: 0.9091, Recall: 1.0000, F1-score: 0.9524
+  Class 17: Accuracy: 0.8600, Precision: 1.0000, Recall: 0.8600, F1-score: 0.9247
+  Class 18: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 19: Accuracy: 0.9400, Precision: 0.9895, Recall: 0.9400, F1-score: 0.9641
+  Class 20: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 0.9300, Precision: 0.9588, Recall: 0.9300, F1-score: 0.9442
+  Class 23: Accuracy: 0.9700, Precision: 0.9798, Recall: 0.9700, F1-score: 0.9749
+  Class 24: Accuracy: 1.0000, Precision: 0.8475, Recall: 1.0000, F1-score: 0.9174
+  Class 25: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+Average: Accuracy: 0.9727, Precision: 0.9745, Recall: 0.9727, F1-Score: 0.9950
+
+Epoch 10/100 - Training Loss: 0.2168
+Validation Results:
+  Accuracy: 0.9881
+  Precision: 0.9885
+  Recall: 0.9881
+  F1-score: 0.9881
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9300, Precision: 1.0000, Recall: 0.9300, F1-score: 0.9637
+  Class 1: Accuracy: 0.9900, Precision: 0.9519, Recall: 0.9900, F1-score: 0.9706
+  Class 2: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 3: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 4: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 5: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 1.0000, Precision: 0.9615, Recall: 1.0000, F1-score: 0.9804
+  Class 11: Accuracy: 1.0000, Precision: 0.9434, Recall: 1.0000, F1-score: 0.9709
+  Class 12: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+  Class 17: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 18: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 19: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 20: Accuracy: 0.9400, Precision: 1.0000, Recall: 0.9400, F1-score: 0.9691
+  Class 21: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 22: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 23: Accuracy: 0.9700, Precision: 0.9898, Recall: 0.9700, F1-score: 0.9798
+  Class 24: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 25: Accuracy: 0.9900, Precision: 0.9612, Recall: 0.9900, F1-score: 0.9754
+Average: Accuracy: 0.9881, Precision: 0.9885, Recall: 0.9881, F1-Score: 0.9754
+
+Epoch 11/100 - Training Loss: 0.1681
+/users/project1/pt01214/Projects/Comparison-of-CNN/Comparison-of-Convolutional-Neural-Network-Architectures-for-INTERCO/cnns/cnn.py:87: RuntimeWarning: More than 20 figures have been opened. Figures created through the pyplot interface (`matplotlib.pyplot.figure`) are retained until explicitly closed and may consume too much memory. (To control this warning, see the rcParam `figure.max_open_warning`). Consider using `matplotlib.pyplot.close()`.
+  plt.figure(figsize=(8, 6))
+Validation Results:
+  Accuracy: 0.9881
+  Precision: 0.9887
+  Recall: 0.9881
+  F1-score: 0.9881
+
+Per-Class Metrics:
+  Class 0: Accuracy: 1.0000, Precision: 0.9009, Recall: 1.0000, F1-score: 0.9479
+  Class 1: Accuracy: 0.9000, Precision: 1.0000, Recall: 0.9000, F1-score: 0.9474
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 0.9800, Precision: 0.9333, Recall: 0.9800, F1-score: 0.9561
+  Class 4: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 5: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 6: Accuracy: 0.9300, Precision: 1.0000, Recall: 0.9300, F1-score: 0.9637
+  Class 7: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 0.9800, Precision: 0.9899, Recall: 0.9800, F1-score: 0.9849
+  Class 10: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 0.9900, Precision: 0.9706, Recall: 0.9900, F1-score: 0.9802
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 0.9615, Recall: 1.0000, F1-score: 0.9804
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 0.9900, Precision: 0.9706, Recall: 0.9900, F1-score: 0.9802
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9881, Precision: 0.9887, Recall: 0.9881, F1-Score: 1.0000
+
+Epoch 12/100 - Training Loss: 0.2128
+Validation Results:
+  Accuracy: 0.9927
+  Precision: 0.9930
+  Recall: 0.9927
+  F1-score: 0.9927
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9100, Precision: 1.0000, Recall: 0.9100, F1-score: 0.9529
+  Class 1: Accuracy: 0.9900, Precision: 0.9429, Recall: 0.9900, F1-score: 0.9659
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 4: Accuracy: 0.9400, Precision: 1.0000, Recall: 0.9400, F1-score: 0.9691
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 10: Accuracy: 1.0000, Precision: 0.9434, Recall: 1.0000, F1-score: 0.9709
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 19: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+Average: Accuracy: 0.9927, Precision: 0.9930, Recall: 0.9927, F1-Score: 0.9950
+
+Best model saved with Accuracy: 0.9927
+Epoch 13/100 - Training Loss: 0.4899
+Validation Results:
+  Accuracy: 0.8373
+  Precision: 0.8929
+  Recall: 0.8373
+  F1-score: 0.8381
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.4800, Precision: 0.5783, Recall: 0.4800, F1-score: 0.5246
+  Class 1: Accuracy: 0.9500, Precision: 0.3016, Recall: 0.9500, F1-score: 0.4578
+  Class 2: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 3: Accuracy: 0.9100, Precision: 0.9891, Recall: 0.9100, F1-score: 0.9479
+  Class 4: Accuracy: 1.0000, Precision: 0.7353, Recall: 1.0000, F1-score: 0.8475
+  Class 5: Accuracy: 0.8500, Precision: 0.8673, Recall: 0.8500, F1-score: 0.8586
+  Class 6: Accuracy: 1.0000, Precision: 0.9615, Recall: 1.0000, F1-score: 0.9804
+  Class 7: Accuracy: 0.5000, Precision: 0.9091, Recall: 0.5000, F1-score: 0.6452
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 0.5400, Precision: 0.9153, Recall: 0.5400, F1-score: 0.6792
+  Class 10: Accuracy: 1.0000, Precision: 0.9009, Recall: 1.0000, F1-score: 0.9479
+  Class 11: Accuracy: 1.0000, Precision: 0.8264, Recall: 1.0000, F1-score: 0.9050
+  Class 12: Accuracy: 0.9600, Precision: 0.9697, Recall: 0.9600, F1-score: 0.9648
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 0.9800, Precision: 0.9703, Recall: 0.9800, F1-score: 0.9751
+  Class 15: Accuracy: 0.4100, Precision: 0.9762, Recall: 0.4100, F1-score: 0.5775
+  Class 16: Accuracy: 1.0000, Precision: 0.7874, Recall: 1.0000, F1-score: 0.8811
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 0.2400, Precision: 0.9231, Recall: 0.2400, F1-score: 0.3810
+  Class 19: Accuracy: 0.8900, Precision: 0.9889, Recall: 0.8900, F1-score: 0.9368
+  Class 20: Accuracy: 0.6600, Precision: 0.9296, Recall: 0.6600, F1-score: 0.7719
+  Class 21: Accuracy: 0.7300, Precision: 0.9733, Recall: 0.7300, F1-score: 0.8343
+  Class 22: Accuracy: 0.9900, Precision: 0.9612, Recall: 0.9900, F1-score: 0.9754
+  Class 23: Accuracy: 0.6900, Precision: 0.8961, Recall: 0.6900, F1-score: 0.7797
+  Class 24: Accuracy: 1.0000, Precision: 0.9615, Recall: 1.0000, F1-score: 0.9804
+  Class 25: Accuracy: 1.0000, Precision: 0.8929, Recall: 1.0000, F1-score: 0.9434
+Average: Accuracy: 0.8373, Precision: 0.8929, Recall: 0.8373, F1-Score: 0.9434
+
+Epoch 14/100 - Training Loss: 0.1882
+Validation Results:
+  Accuracy: 0.9962
+  Precision: 0.9963
+  Recall: 0.9962
+  F1-score: 0.9962
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9400, Precision: 0.9895, Recall: 0.9400, F1-score: 0.9641
+  Class 1: Accuracy: 1.0000, Precision: 0.9434, Recall: 1.0000, F1-score: 0.9709
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 18: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 19: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 24: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9962, Precision: 0.9963, Recall: 0.9962, F1-Score: 1.0000
+
+Best model saved with Accuracy: 0.9962
+Epoch 15/100 - Training Loss: 0.1510
+Validation Results:
+  Accuracy: 0.9954
+  Precision: 0.9955
+  Recall: 0.9954
+  F1-score: 0.9954
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9500, Precision: 0.9896, Recall: 0.9500, F1-score: 0.9694
+  Class 1: Accuracy: 1.0000, Precision: 0.9434, Recall: 1.0000, F1-score: 0.9709
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 4: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 7: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9954, Precision: 0.9955, Recall: 0.9954, F1-Score: 1.0000
+
+Epoch 16/100 - Training Loss: 0.2494
+Validation Results:
+  Accuracy: 0.9923
+  Precision: 0.9924
+  Recall: 0.9923
+  F1-score: 0.9923
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9500, Precision: 0.9406, Recall: 0.9500, F1-score: 0.9453
+  Class 1: Accuracy: 0.9400, Precision: 1.0000, Recall: 0.9400, F1-score: 0.9691
+  Class 2: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 3: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 4: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 0.9800, Precision: 0.9703, Recall: 0.9800, F1-score: 0.9751
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 0.9900, Precision: 0.9900, Recall: 0.9900, F1-score: 0.9900
+  Class 10: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 13: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 14: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 15: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 20: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 0.9900, Precision: 0.9900, Recall: 0.9900, F1-score: 0.9900
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+Average: Accuracy: 0.9923, Precision: 0.9924, Recall: 0.9923, F1-Score: 0.9950
+
+Epoch 17/100 - Training Loss: 0.1867
+Validation Results:
+  Accuracy: 0.9904
+  Precision: 0.9906
+  Recall: 0.9904
+  F1-score: 0.9904
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9200, Precision: 0.9485, Recall: 0.9200, F1-score: 0.9340
+  Class 1: Accuracy: 0.9600, Precision: 0.9320, Recall: 0.9600, F1-score: 0.9458
+  Class 2: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 5: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 0.9700, Precision: 0.9898, Recall: 0.9700, F1-score: 0.9798
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 0.9500, Precision: 1.0000, Recall: 0.9500, F1-score: 0.9744
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 0.9524, Recall: 1.0000, F1-score: 0.9756
+  Class 19: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 23: Accuracy: 1.0000, Precision: 0.9524, Recall: 1.0000, F1-score: 0.9756
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9904, Precision: 0.9906, Recall: 0.9904, F1-Score: 1.0000
+
+Epoch 18/100 - Training Loss: 0.1281
+Validation Results:
+  Accuracy: 0.9908
+  Precision: 0.9912
+  Recall: 0.9908
+  F1-score: 0.9908
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9100, Precision: 1.0000, Recall: 0.9100, F1-score: 0.9529
+  Class 1: Accuracy: 1.0000, Precision: 0.9174, Recall: 1.0000, F1-score: 0.9569
+  Class 2: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 3: Accuracy: 0.9500, Precision: 1.0000, Recall: 0.9500, F1-score: 0.9744
+  Class 4: Accuracy: 0.9900, Precision: 0.9900, Recall: 0.9900, F1-score: 0.9900
+  Class 5: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 6: Accuracy: 0.9900, Precision: 0.9612, Recall: 0.9900, F1-score: 0.9754
+  Class 7: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 10: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 19: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9908, Precision: 0.9912, Recall: 0.9908, F1-Score: 1.0000
+
+Epoch 19/100 - Training Loss: 0.2092
+Validation Results:
+  Accuracy: 0.9912
+  Precision: 0.9916
+  Recall: 0.9912
+  F1-score: 0.9910
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.8500, Precision: 1.0000, Recall: 0.8500, F1-score: 0.9189
+  Class 1: Accuracy: 0.9900, Precision: 0.9167, Recall: 0.9900, F1-score: 0.9519
+  Class 2: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 1.0000, Precision: 0.9434, Recall: 1.0000, F1-score: 0.9709
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 0.9900, Precision: 0.9900, Recall: 0.9900, F1-score: 0.9900
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 0.9615, Recall: 1.0000, F1-score: 0.9804
+  Class 23: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9912, Precision: 0.9916, Recall: 0.9912, F1-Score: 1.0000
+
+Epoch 20/100 - Training Loss: 0.1197
+Validation Results:
+  Accuracy: 0.9965
+  Precision: 0.9966
+  Recall: 0.9965
+  F1-score: 0.9965
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9500, Precision: 1.0000, Recall: 0.9500, F1-score: 0.9744
+  Class 1: Accuracy: 1.0000, Precision: 0.9524, Recall: 1.0000, F1-score: 0.9756
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 0.9900, Precision: 0.9900, Recall: 0.9900, F1-score: 0.9900
+  Class 13: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 0.9900, Precision: 0.9802, Recall: 0.9900, F1-score: 0.9851
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9965, Precision: 0.9966, Recall: 0.9965, F1-Score: 1.0000
+
+Best model saved with Accuracy: 0.9965
+Epoch 21/100 - Training Loss: 0.1278
+Validation Results:
+  Accuracy: 0.9858
+  Precision: 0.9860
+  Recall: 0.9858
+  F1-score: 0.9858
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9400, Precision: 0.9592, Recall: 0.9400, F1-score: 0.9495
+  Class 1: Accuracy: 1.0000, Precision: 0.9434, Recall: 1.0000, F1-score: 0.9709
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 0.9900, Precision: 0.9706, Recall: 0.9900, F1-score: 0.9802
+  Class 4: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 7: Accuracy: 0.9700, Precision: 0.9604, Recall: 0.9700, F1-score: 0.9652
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 0.9800, Precision: 0.9899, Recall: 0.9800, F1-score: 0.9849
+  Class 10: Accuracy: 0.9900, Precision: 0.9706, Recall: 0.9900, F1-score: 0.9802
+  Class 11: Accuracy: 0.9800, Precision: 0.9800, Recall: 0.9800, F1-score: 0.9800
+  Class 12: Accuracy: 0.9900, Precision: 0.9612, Recall: 0.9900, F1-score: 0.9754
+  Class 13: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 16: Accuracy: 0.9900, Precision: 0.9900, Recall: 0.9900, F1-score: 0.9900
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 19: Accuracy: 0.9700, Precision: 0.9417, Recall: 0.9700, F1-score: 0.9557
+  Class 20: Accuracy: 0.9800, Precision: 0.9899, Recall: 0.9800, F1-score: 0.9849
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 23: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+Average: Accuracy: 0.9858, Precision: 0.9860, Recall: 0.9858, F1-Score: 0.9950
+
+Epoch 22/100 - Training Loss: 0.1103
+Validation Results:
+  Accuracy: 0.9954
+  Precision: 0.9955
+  Recall: 0.9954
+  F1-score: 0.9954
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9600, Precision: 0.9897, Recall: 0.9600, F1-score: 0.9746
+  Class 1: Accuracy: 1.0000, Precision: 0.9615, Recall: 1.0000, F1-score: 0.9804
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 11: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 12: Accuracy: 1.0000, Precision: 0.9615, Recall: 1.0000, F1-score: 0.9804
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 19: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 20: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9954, Precision: 0.9955, Recall: 0.9954, F1-Score: 1.0000
+
+Epoch 23/100 - Training Loss: 0.1400
+Validation Results:
+  Accuracy: 0.9969
+  Precision: 0.9971
+  Recall: 0.9969
+  F1-score: 0.9969
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9500, Precision: 1.0000, Recall: 0.9500, F1-score: 0.9744
+  Class 1: Accuracy: 1.0000, Precision: 0.9434, Recall: 1.0000, F1-score: 0.9709
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9969, Precision: 0.9971, Recall: 0.9969, F1-Score: 1.0000
+
+Best model saved with Accuracy: 0.9969
+Epoch 24/100 - Training Loss: 0.1062
+Validation Results:
+  Accuracy: 0.9969
+  Precision: 0.9970
+  Recall: 0.9969
+  F1-score: 0.9969
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9600, Precision: 0.9897, Recall: 0.9600, F1-score: 0.9746
+  Class 1: Accuracy: 1.0000, Precision: 0.9615, Recall: 1.0000, F1-score: 0.9804
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 4: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 7: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 0.9900, Precision: 0.9900, Recall: 0.9900, F1-score: 0.9900
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9969, Precision: 0.9970, Recall: 0.9969, F1-Score: 1.0000
+
+Epoch 25/100 - Training Loss: 0.1307
+Validation Results:
+  Accuracy: 0.9935
+  Precision: 0.9936
+  Recall: 0.9935
+  F1-score: 0.9935
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9400, Precision: 0.9691, Recall: 0.9400, F1-score: 0.9543
+  Class 1: Accuracy: 1.0000, Precision: 0.9434, Recall: 1.0000, F1-score: 0.9709
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 4: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 7: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 12: Accuracy: 0.9800, Precision: 0.9899, Recall: 0.9800, F1-score: 0.9849
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 20: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 23: Accuracy: 0.9900, Precision: 0.9900, Recall: 0.9900, F1-score: 0.9900
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9935, Precision: 0.9936, Recall: 0.9935, F1-Score: 1.0000
+
+Epoch 26/100 - Training Loss: 0.1284
+Validation Results:
+  Accuracy: 0.9623
+  Precision: 0.9634
+  Recall: 0.9623
+  F1-score: 0.9621
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9000, Precision: 0.9184, Recall: 0.9000, F1-score: 0.9091
+  Class 1: Accuracy: 0.7900, Precision: 0.8977, Recall: 0.7900, F1-score: 0.8404
+  Class 2: Accuracy: 0.9800, Precision: 0.9608, Recall: 0.9800, F1-score: 0.9703
+  Class 3: Accuracy: 0.8500, Precision: 0.9659, Recall: 0.8500, F1-score: 0.9043
+  Class 4: Accuracy: 0.9400, Precision: 0.8704, Recall: 0.9400, F1-score: 0.9038
+  Class 5: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 6: Accuracy: 0.9900, Precision: 0.9612, Recall: 0.9900, F1-score: 0.9754
+  Class 7: Accuracy: 0.9500, Precision: 0.9694, Recall: 0.9500, F1-score: 0.9596
+  Class 8: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 9: Accuracy: 0.9300, Precision: 0.8455, Recall: 0.9300, F1-score: 0.8857
+  Class 10: Accuracy: 0.9800, Precision: 0.9800, Recall: 0.9800, F1-score: 0.9800
+  Class 11: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 12: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 15: Accuracy: 1.0000, Precision: 0.9434, Recall: 1.0000, F1-score: 0.9709
+  Class 16: Accuracy: 0.9900, Precision: 0.9802, Recall: 0.9900, F1-score: 0.9851
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 19: Accuracy: 0.8600, Precision: 0.9773, Recall: 0.8600, F1-score: 0.9149
+  Class 20: Accuracy: 0.9900, Precision: 0.9900, Recall: 0.9900, F1-score: 0.9900
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 0.9615, Recall: 1.0000, F1-score: 0.9804
+  Class 23: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 0.9900, Precision: 0.8761, Recall: 0.9900, F1-score: 0.9296
+Average: Accuracy: 0.9623, Precision: 0.9634, Recall: 0.9623, F1-Score: 0.9296
+
+Epoch 27/100 - Training Loss: 0.1789
+Validation Results:
+  Accuracy: 0.9900
+  Precision: 0.9905
+  Recall: 0.9900
+  F1-score: 0.9900
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9000, Precision: 1.0000, Recall: 0.9000, F1-score: 0.9474
+  Class 1: Accuracy: 1.0000, Precision: 0.9009, Recall: 1.0000, F1-score: 0.9479
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 4: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 7: Accuracy: 0.9400, Precision: 0.9792, Recall: 0.9400, F1-score: 0.9592
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 0.9800, Precision: 0.9800, Recall: 0.9800, F1-score: 0.9800
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 0.9900, Precision: 0.9900, Recall: 0.9900, F1-score: 0.9900
+  Class 12: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 20: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9900, Precision: 0.9905, Recall: 0.9900, F1-Score: 1.0000
+
+Epoch 28/100 - Training Loss: 0.1033
+Validation Results:
+  Accuracy: 0.9985
+  Precision: 0.9985
+  Recall: 0.9985
+  F1-score: 0.9985
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 1: Accuracy: 1.0000, Precision: 0.9615, Recall: 1.0000, F1-score: 0.9804
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9985, Precision: 0.9985, Recall: 0.9985, F1-Score: 1.0000
+
+Best model saved with Accuracy: 0.9985
+Epoch 29/100 - Training Loss: 0.0966
+Validation Results:
+  Accuracy: 0.9969
+  Precision: 0.9970
+  Recall: 0.9969
+  F1-score: 0.9969
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9400, Precision: 1.0000, Recall: 0.9400, F1-score: 0.9691
+  Class 1: Accuracy: 1.0000, Precision: 0.9524, Recall: 1.0000, F1-score: 0.9756
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9969, Precision: 0.9970, Recall: 0.9969, F1-Score: 1.0000
+
+Epoch 30/100 - Training Loss: 0.1253
+Validation Results:
+  Accuracy: 0.9942
+  Precision: 0.9944
+  Recall: 0.9942
+  F1-score: 0.9942
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9500, Precision: 0.9896, Recall: 0.9500, F1-score: 0.9694
+  Class 1: Accuracy: 1.0000, Precision: 0.9524, Recall: 1.0000, F1-score: 0.9756
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 0.9900, Precision: 0.9900, Recall: 0.9900, F1-score: 0.9900
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 0.9400, Precision: 1.0000, Recall: 0.9400, F1-score: 0.9691
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 19: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 23: Accuracy: 1.0000, Precision: 0.9524, Recall: 1.0000, F1-score: 0.9756
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9942, Precision: 0.9944, Recall: 0.9942, F1-Score: 1.0000
+
+Epoch 31/100 - Training Loss: 0.4078
+Validation Results:
+  Accuracy: 0.9942
+  Precision: 0.9944
+  Recall: 0.9942
+  F1-score: 0.9942
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9300, Precision: 1.0000, Recall: 0.9300, F1-score: 0.9637
+  Class 1: Accuracy: 0.9900, Precision: 0.9429, Recall: 0.9900, F1-score: 0.9659
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 0.9800, Precision: 0.9800, Recall: 0.9800, F1-score: 0.9800
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 0.9800, Precision: 0.9899, Recall: 0.9800, F1-score: 0.9849
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+  Class 19: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 23: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+Average: Accuracy: 0.9942, Precision: 0.9944, Recall: 0.9942, F1-Score: 0.9950
+
+Epoch 32/100 - Training Loss: 0.0994
+Validation Results:
+  Accuracy: 0.9938
+  Precision: 0.9940
+  Recall: 0.9938
+  F1-score: 0.9938
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9500, Precision: 1.0000, Recall: 0.9500, F1-score: 0.9744
+  Class 1: Accuracy: 1.0000, Precision: 0.9434, Recall: 1.0000, F1-score: 0.9709
+  Class 2: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 3: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 4: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+  Class 7: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 0.9700, Precision: 0.9898, Recall: 0.9700, F1-score: 0.9798
+  Class 17: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 0.9900, Precision: 0.9900, Recall: 0.9900, F1-score: 0.9900
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9938, Precision: 0.9940, Recall: 0.9938, F1-Score: 1.0000
+
+Epoch 33/100 - Training Loss: 0.0804
+Validation Results:
+  Accuracy: 0.9965
+  Precision: 0.9967
+  Recall: 0.9965
+  F1-score: 0.9965
+
+Per-Class Metrics:
+  Class 0: Accuracy: 1.0000, Precision: 0.9434, Recall: 1.0000, F1-score: 0.9709
+  Class 1: Accuracy: 0.9300, Precision: 1.0000, Recall: 0.9300, F1-score: 0.9637
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 16: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 23: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9965, Precision: 0.9967, Recall: 0.9965, F1-Score: 1.0000
+
+Epoch 34/100 - Training Loss: 0.0801
+Validation Results:
+  Accuracy: 0.9973
+  Precision: 0.9974
+  Recall: 0.9973
+  F1-score: 0.9973
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9500, Precision: 1.0000, Recall: 0.9500, F1-score: 0.9744
+  Class 1: Accuracy: 1.0000, Precision: 0.9615, Recall: 1.0000, F1-score: 0.9804
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 12: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 23: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9973, Precision: 0.9974, Recall: 0.9973, F1-Score: 1.0000
+
+Epoch 35/100 - Training Loss: 0.1441
+Validation Results:
+  Accuracy: 0.9965
+  Precision: 0.9967
+  Recall: 0.9965
+  F1-score: 0.9965
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9200, Precision: 1.0000, Recall: 0.9200, F1-score: 0.9583
+  Class 1: Accuracy: 1.0000, Precision: 0.9346, Recall: 1.0000, F1-score: 0.9662
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9965, Precision: 0.9967, Recall: 0.9965, F1-Score: 1.0000
+
+Epoch 36/100 - Training Loss: 0.0699
+Validation Results:
+  Accuracy: 0.9958
+  Precision: 0.9959
+  Recall: 0.9958
+  F1-score: 0.9958
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9400, Precision: 1.0000, Recall: 0.9400, F1-score: 0.9691
+  Class 1: Accuracy: 1.0000, Precision: 0.9434, Recall: 1.0000, F1-score: 0.9709
+  Class 2: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 23: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9958, Precision: 0.9959, Recall: 0.9958, F1-Score: 1.0000
+
+Epoch 37/100 - Training Loss: 0.1251
+Validation Results:
+  Accuracy: 0.9938
+  Precision: 0.9941
+  Recall: 0.9938
+  F1-score: 0.9939
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9300, Precision: 0.9894, Recall: 0.9300, F1-score: 0.9588
+  Class 1: Accuracy: 1.0000, Precision: 0.9174, Recall: 1.0000, F1-score: 0.9569
+  Class 2: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 3: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 4: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 1.0000, Precision: 0.9804, Recall: 1.0000, F1-score: 0.9901
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 23: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+Average: Accuracy: 0.9938, Precision: 0.9941, Recall: 0.9938, F1-Score: 0.9950
+
+Epoch 38/100 - Training Loss: 0.1425
+Validation Results:
+  Accuracy: 0.9954
+  Precision: 0.9956
+  Recall: 0.9954
+  F1-score: 0.9954
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9200, Precision: 1.0000, Recall: 0.9200, F1-score: 0.9583
+  Class 1: Accuracy: 1.0000, Precision: 0.9259, Recall: 1.0000, F1-score: 0.9615
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 0.9700, Precision: 1.0000, Recall: 0.9700, F1-score: 0.9848
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9954, Precision: 0.9956, Recall: 0.9954, F1-Score: 1.0000
+
+Epoch 39/100 - Training Loss: 0.1033
+Validation Results:
+  Accuracy: 0.9969
+  Precision: 0.9971
+  Recall: 0.9969
+  F1-score: 0.9969
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9400, Precision: 1.0000, Recall: 0.9400, F1-score: 0.9691
+  Class 1: Accuracy: 1.0000, Precision: 0.9346, Recall: 1.0000, F1-score: 0.9662
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9969, Precision: 0.9971, Recall: 0.9969, F1-Score: 1.0000
+
+Epoch 40/100 - Training Loss: 0.0853
+Validation Results:
+  Accuracy: 0.9973
+  Precision: 0.9974
+  Recall: 0.9973
+  F1-score: 0.9973
+
+Per-Class Metrics:
+  Class 0: Accuracy: 1.0000, Precision: 0.9524, Recall: 1.0000, F1-score: 0.9756
+  Class 1: Accuracy: 0.9500, Precision: 0.9896, Recall: 0.9500, F1-score: 0.9694
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 4: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 7: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9973, Precision: 0.9974, Recall: 0.9973, F1-Score: 1.0000
+
+Epoch 41/100 - Training Loss: 0.1297
+Validation Results:
+  Accuracy: 0.9969
+  Precision: 0.9970
+  Recall: 0.9969
+  F1-score: 0.9969
+
+Per-Class Metrics:
+  Class 0: Accuracy: 1.0000, Precision: 0.9434, Recall: 1.0000, F1-score: 0.9709
+  Class 1: Accuracy: 0.9400, Precision: 0.9895, Recall: 0.9400, F1-score: 0.9641
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 12: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 20: Accuracy: 1.0000, Precision: 0.9901, Recall: 1.0000, F1-score: 0.9950
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9969, Precision: 0.9970, Recall: 0.9969, F1-Score: 1.0000
+
+Epoch 42/100 - Training Loss: 0.0713
+Validation Results:
+  Accuracy: 0.9977
+  Precision: 0.9978
+  Recall: 0.9977
+  F1-score: 0.9977
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9400, Precision: 1.0000, Recall: 0.9400, F1-score: 0.9691
+  Class 1: Accuracy: 1.0000, Precision: 0.9434, Recall: 1.0000, F1-score: 0.9709
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9977, Precision: 0.9978, Recall: 0.9977, F1-Score: 1.0000
+
+Epoch 43/100 - Training Loss: 0.0965
+Validation Results:
+  Accuracy: 0.9931
+  Precision: 0.9933
+  Recall: 0.9931
+  F1-score: 0.9931
+
+Per-Class Metrics:
+  Class 0: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 1: Accuracy: 0.9800, Precision: 0.9515, Recall: 0.9800, F1-score: 0.9655
+  Class 2: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 3: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 4: Accuracy: 0.9600, Precision: 1.0000, Recall: 0.9600, F1-score: 0.9796
+  Class 5: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 6: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 7: Accuracy: 0.9800, Precision: 1.0000, Recall: 0.9800, F1-score: 0.9899
+  Class 8: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 9: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 10: Accuracy: 1.0000, Precision: 0.9524, Recall: 1.0000, F1-score: 0.9756
+  Class 11: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 12: Accuracy: 0.9500, Precision: 1.0000, Recall: 0.9500, F1-score: 0.9744
+  Class 13: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 14: Accuracy: 0.9900, Precision: 1.0000, Recall: 0.9900, F1-score: 0.9950
+  Class 15: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 16: Accuracy: 1.0000, Precision: 0.9709, Recall: 1.0000, F1-score: 0.9852
+  Class 17: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 18: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 19: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 20: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 21: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 22: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 23: Accuracy: 1.0000, Precision: 0.9524, Recall: 1.0000, F1-score: 0.9756
+  Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+  Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
+Average: Accuracy: 0.9931, Precision: 0.9933, Recall: 0.9931, F1-Score: 1.0000
+
+slurmstepd: error: *** JOB 15814109 ON gt0538 CANCELLED AT 2025-02-21T17:22:46 DUE TO TIME LIMIT ***
