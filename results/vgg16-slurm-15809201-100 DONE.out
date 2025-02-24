@@ -1942,6 +1942,3 @@ Per-Class Metrics:
   Class 24: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
   Class 25: Accuracy: 1.0000, Precision: 1.0000, Recall: 1.0000, F1-score: 1.0000
 Average: Accuracy: 0.9973, Precision: 0.9974, Recall: 0.9973, F1-Score: 1.0000
-
-Best model saved with Accuracy: 0.9973
-slurmstepd: error: *** JOB 15809201 ON gt0223 CANCELLED AT 2025-02-18T21:22:52 DUE TO TIME LIMIT ***
